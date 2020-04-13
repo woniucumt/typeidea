@@ -31,6 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'blog',
+    'comment',
+    'config',
+
+    #这里说Django是根据APP的顺序查找对应的资源的。这就意味着这几个app的顺序是有关系的。
+    #Django会从上面的app的目录下面找templete的。但是我真的很无语，你直接固定好路径不行吗？
+    #给定路径，不就和顺序无关了？
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
