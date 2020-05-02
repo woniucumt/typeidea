@@ -2,7 +2,6 @@ from django.contrib import admin
 from .models import Post, Category, Tag
 from django.utils.html import format_html
 from django.urls import reverse
-from typeidea.custom_site import custom_site
 from .adminforms import PostAdminForm
 # Register your models here.
 class PostInline(admin.TabularInline):#TabularInline不知道为何。
