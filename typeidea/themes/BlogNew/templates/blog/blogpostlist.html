@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Typerite</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../../static/css/base.css">
+    <link rel="stylesheet" href="../../static/css/vendor.css">
+    <link rel="stylesheet" href="../../static/css/detailsmain.css">
+
+
+
+    <!-- script
+    ================================================== -->
+    <script src="../../static/js/modernizr.js"></script>
+    <script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../static/js/bootstrap.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link href="../../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../static/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../static/css/detailsstyle.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../static/css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+
+
+
+</head>
+
+<body>
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+<div class="agileits_main" style="height: 15rem;">
+    <!-- header -->
+	<div class="container">
+		<div class="w3_agile_logo">
+			<h1 style="padding-top: 4rem"><a href="{% url 'blog-view' %}" >无疆</a></h1>
+		</div>
+	</div>
+	</div>
+	<!-- //banner -->
+
+    <!-- preloader
+    ================================================== -->
+{#    <div id="preloader">#}
+{#        <div id="loader" class="dots-fade">#}
+{#            <div></div>#}
+{#            <div></div>#}
+{#            <div></div>#}
+{#        </div>#}
+{#    </div>#}
+
+    <div id="top" class="s-wrap site-wrapper">
+
+        <!-- site header
+        ================================================== -->
+{#        <header class="s-header go-top2">#}
+{#        如果要实现侧滑可以用上面的例子#}
+        <header class="s-header go-top2">
+            <div class="header__top ">
+
+{#                <p id="closemenu" style="padding-bottom: 10px;margin-left: 0px;padding-left: 0px">#}
+{#                    <img src="../../static/images/closemenu.svg" style="height: 60px;width: 60px;" alt="Homepage">#}
+{#                </p>#}
+                <p style="font-size: 4rem;color: #ffffff;" ><a href="{% url 'blog-view' %}" style="color:#f0ad4e">无疆</a></p>
+
+{#                <div class="header__search">#}
+{##}
+{#                    <form role="search" method="get" class="header__search-form" action="#">#}
+{#                        <label>#}
+{#                            <span class="hide-content">Search for:</span>#}
+{#                            <input type="search" class="header__search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">#}
+{#                        </label>#}
+{#                        <input type="submit" class="header__search-submit" value="Search">#}
+{#                    </form>#}
+{##}
+{#                    <a href="#0" title="Close Search" class="header__search-close">Close</a>#}
+{##}
+{#                </div>  <!-- end header__search -->#}
+
+                <!-- toggles -->
+{#                <a href="#0" class="header__search-trigger"></a>#}
+{#                <a href="#0" class="header__menu-toggle"><span>Menu</span></a>#}
+
+            </div> <!-- end header__top -->
+            <p id="closemenu" style="position: absolute;right: 0px;top:40%">
+                <img src="../../static/images/closemenu2.png" style="height: 100px;width: 40px;" alt="Homepage">
+            </p>
+            <nav class="header__nav-wrap">
+
+                <ul class="header__nav">
+{#                    <li id="closemenu">关闭菜单</li>#}
+                    <li class="current" style="color: #ffffff">当前位置：博客列表</li>
+                    {% if category.name  %}
+                        <li class="current" style="color: #ffffff">当前分类：{{ category.name }}</li>
+                    {% else %}
+                        <li class="current" style="color: #ffffff">当前分类：全部</li>
+                    {% endif %}
+
+                    <li class="current" style="color: #ffffff"><hr/></li>
+                    <li class="current"><a href={% url 'newIndex' %} style="color:#f0ad4e" >主站点</a></li>
+{#                    <li><a href="styles.html" title="">Django是基础啊</a></li>#}
+{#                    <li><a href="styles.html" title="">前端那一大堆事</a></li>#}
+{#                    <li><a href="styles.html" title="">Docker你得学啊</a></li>#}
+{#                    <li><a href="styles.html" title="">Git你得会啊</a></li>#}
+{#                    <li><a href="page-about.html" title="">Linux你学了吗</a></li>#}
+{#                    <li><a href="page-contact.html" title="">基础内功得有吧</a></li>#}
+{#                    <li><a href="page-contact.html" title="">猎杀offer的时刻到了</a></li>#}
+{#                    <li class="has-children">#}
+{#                        <a href="#0" title="">Categories</a>#}
+{#                        <ul class="sub-menu">#}
+{#                        <li><a href="category.html">Lifestyle</a></li>#}
+{#                        <li><a href="category.html">Health</a></li>#}
+{#                        <li><a href="category.html">Family</a></li>#}
+{#                        <li><a href="category.html">Management</a></li>#}
+{#                        <li><a href="category.html">Travel</a></li>#}
+{#                        <li><a href="category.html">Work</a></li>#}
+{#                        </ul>#}
+{#                    </li>#}
+{#                    <li class="has-children">#}
+{#                        <a href="#0" title="">Blog Posts</a>#}
+{#                        <ul class="sub-menu">#}
+{#                        <li><a href="single-video.html">Video Post</a></li>#}
+{#                        <li><a href="single-audio.html">Audio Post</a></li>#}
+{#                        <li><a href="single-gallery.html">Gallery Post</a></li>#}
+{#                        <li><a href="single-standard.html">Standard Post</a></li>#}
+{#                        </ul>#}
+{#                    </li>#}
+{#                    <li><a href="styles.html" title="">Styles</a></li>#}
+{#                    <li><a href="page-about.html" title="">About</a></li>#}
+{#                    <li><a href="page-contact.html" title="">Contact</a></li>#}
+                    {% for cate in navs %}
+                        <li><a href="/category/{{ cate.id }}" title="">{{ cate.name }}</a></li>
+                    {% endfor %}
+                </ul> <!-- end header__nav -->
+
+{#                <ul class="header__social">#}
+{#                    <li class="ss-facebook">#}
+{#                        <a href="https://facebook.com/">#}
+{#                            <span class="screen-reader-text">Facebook</span>#}
+{#                        </a>#}
+{#                    </li>#}
+{#                    <li class="ss-twitter">#}
+{#                        <a href="#0">#}
+{#                            <span class="screen-reader-text">Twitter</span>#}
+{#                        </a>#}
+{#                    </li>#}
+{#                    <li class="ss-dribbble">#}
+{#                        <a href="#0">#}
+{#                            <span class="screen-reader-text">Dribbble</span>#}
+{#                        </a>#}
+{#                    </li>#}
+{#                    <li class="ss-pinterest">#}
+{#                        <a href="#0">#}
+{#                            <span class="screen-reader-text">Behance</span>#}
+{#                        </a>#}
+{#                    </li>#}
+{#                </ul>#}
+
+            </nav> <!-- end header__nav-wrap -->
+
+
+
+        </header> <!-- end s-header -->
+
+        <div class="s-content">
+
+            <div class="masonry-wrap">
+
+                <div class="masonry">
+
+                    <div class="grid-sizer"></div>
+
+                    <article class="masonry__brick entry  animate-this" >
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                {% if category.name  %}
+                                    <h4 style="display: inline">当前分类：{{ category.name }}</h4>
+                                    <a href="{% url 'postlist' %}"><h4 style="display: inline;padding-left: 10px" >全部</h4></a>
+                                {% else %}
+                                    <h4 style="display: inline">当前分类：全部</h4>
+                                {% endif %}
+                            </div>
+                            <hr/>
+                        </div>
+                    </article> <!-- end article -->
+
+
+                    {% for post in post_list %}
+
+                        <article class="masonry__brick entry  animate-this">
+
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h2 class="entry__title"><a href="{% url 'post-detail'  post.id  %}">{{ post.title }}</a></h2>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-cat">
+                                        <a >分类 : {{ post.category }}</a>
+{#                                        <a >标签:{{ post.tag }}</a>#}
+                                    </span>
+                                    <span class="entry__meta-date">发表时间：
+                                        <a >{{ post.created_time }}</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p class="wordcut" style="min-height: 60px;" >
+                                    {{ post.desc }}
+
+                                </p>
+                            </div>
+                            <hr/>
+                                <span  style="vertical-align: middle">
+
+                                    <img src="../../static/images/icons/read.svg" style="height: 18px;width: 18px;">
+                                    <a>阅读 (120)</a>
+                                    <img src="../../static/images/icons/dianzan.svg" style="height: 18px;width: 18px;">
+                                    <a>点赞 (12)</a>
+                                    <img src="../../static/images/icons/share.svg" style="height: 18px;width: 18px;">
+                                    <a>分享 (10086)</a>
+                                </span>
+                        </div>
+                    </article>
+
+                    {% endfor %}
+
+                    {% if not post_list %}
+
+                        <article class="masonry__brick entry  animate-this">
+
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h2 class="entry__title"><a >在学了在学了别催鸭！</a></h2>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-cat">
+                                        <a >分类 : {{ post.category }}</a>
+{#                                        <a >标签:{{ post.tag }}</a>#}
+                                    </span>
+                                    <span class="entry__meta-date">发表时间：
+                                        <a >系统上线那一天</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p class="wordcut" style="min-height: 60px;" >
+                                    博主在学了！原谅博主又得找工作又得学各种东西……写博不易，且催且珍惜！
+                                    毕竟系统才刚上线鸭！系统整体升级，之前的文章不要了！不要了！
+
+                                </p>
+                            </div>
+                            <hr/>
+                                <span  style="vertical-align: middle">
+
+                                    <img src="../../static/images/icons/read.svg" style="height: 18px;width: 18px;">
+                                    <a>催</a>
+                                    <img src="../../static/images/icons/dianzan.svg" style="height: 18px;width: 18px;">
+                                    <a>催催</a>
+                                    <img src="../../static/images/icons/share.svg" style="height: 18px;width: 18px;">
+                                    <a>催催催</a>
+                                </span>
+                        </div>
+                    </article>
+
+                    {% endif %}
+
+
+
+                </div> <!-- end masonry -->
+
+            </div> <!-- end masonry-wrap -->
+
+            <div class="row">
+                <div class="column large-full">
+                    <nav class="pgn" style="font-size: 20px">
+                            {% if page_obj %}
+                            {% if page_obj.has_previous %}
+                                <a style="font-size: 20px" href="?page={{ page_obj.previous_page_number }}">上一页 &nbsp;&nbsp;</a>
+                            {% endif %}
+                                Page {{ page_obj.number }} of {{ paginator.num_pages }}.
+                            {% if page_obj.has_next %}
+                                <a style="font-size: 20px" href="?page={{ page_obj.next_page_number }}">&nbsp;&nbsp;下一页</a>
+                            {% endif %}
+                            {% endif %}
+                    </nav>
+                </div>
+            </div>
+
+        </div> <!-- end s-content -->
+
+
+        <!-- footer
+        ================================================== -->
+        <footer class="s-footer">
+            <div class="row">
+                <div class="column large-full footer__content">
+                    <div class="footer__copyright">
+                        <span>© Copyright Woniu 2020</span>
+                        <span>Powered By Django</span>
+                    </div>
+                    <div class="footer__copyright">
+                        <span>Code Version:v2.0-Beta</span>
+                        <span>Theme Version:v2.0.1-Beta</span>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="go-top" style="text-align: left">
+                <p id="p1" style="padding-bottom: 10px;margin-left: 0px;padding-left: 0px">
+                    <img src="../../static/images/openmenu.png" style="height: 100px;width: 40px;" alt="Homepage"></p>
+            </div>
+        </footer>
+
+    </div> <!-- end s-wrap -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="../../static/js/jquery-3.2.1.min.js"></script>
+    <script src="../../static/js/plugins.js"></script>
+    <script src="../../static/js/detailsmain.js"></script>
+    <script src="../../static/js/main2.js"></script>
+
+
+</body>

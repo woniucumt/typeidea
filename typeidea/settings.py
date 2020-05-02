@@ -31,9 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'typeidea',
+    #下面是不是有一点不同鸭。这么解决是可以运行的，但是不对
+    #'typeidea.themes.bootstrap',
     'blog',
     'comment',
     'config',
+    'crispy_forms',
+    'ckeditor',
+    'ckeditor_uploader',
 
     #这里说Django是根据APP的顺序查找对应的资源的。这就意味着这几个app的顺序是有关系的。
     #Django会从上面的app的目录下面找templete的。但是我真的很无语，你直接固定好路径不行吗？
@@ -59,10 +65,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'typeidea.urls'
 
+THEME = 'BlogNew'
+#说实话模板的问题先放一个放啊。
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'typeidea/themes/',THEME,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,5 +134,23 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'typeidea/themes/',THEME,"static"),
+]
+#下面这行是干什么的？
+TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'typeidea/themes/',THEME,'templates'),)
 
-TEMPLATE_DIRS = (os.path.join(BASE_DIR, '../../templates'),)
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': 800,
+        'tabSpaces': 4,
+        'extraPlugins': 'codesnippet',
+    },
+}
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+CKEDITOR_UPLOAD_PATH = "article_images"
+CKEDITOR_IMAGE_BACKEND = 'pillow'
