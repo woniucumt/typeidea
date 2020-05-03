@@ -54,7 +54,7 @@ class PostAdmin(admin.ModelAdmin):
     form = PostAdminForm
     list_display = [
         'title','category','status',
-        'created_time','owner','operator'
+        'created_time','owner'
     ]
     list_display_links = []
 
@@ -78,13 +78,13 @@ class PostAdmin(admin.ModelAdmin):
     #     }),
     # )
 
-
-    def operator(self,obj):
-        return format_html(
-            '<a href="{}">编辑</a>',
-            reverse('admin:blog_post_change',args=(obj.id,))
-        )
-    operator.short_description = '操作'
+    #
+    # def operator(self,obj):
+    #     return format_html(
+    #         '<a href="{}">编辑</a>',
+    #         reverse('admin:blog_post_change',args=(obj.id,))
+    #     )
+    # operator.short_description = '操作'
 
     def save_model(self, request, obj, form, change):
         obj.owner=request.user
