@@ -217,6 +217,7 @@
                     <div class="grid-sizer"></div>
 
                        {% for post in post_list %}
+                           {% if not post.is_topped %}
 
                         <article class="masonry__brick entry  animate-this">
 
@@ -226,7 +227,7 @@
                                 <div class="entry__meta">
                                     <span class="entry__meta-cat">
                                         <a href="category.html">分类:{{ post.category }}</a>
-                                        <a href="category.html">标签:{{ post.tag }}</a>
+{#                                        <a href="category.html">标签:{{ post.tag }}</a>#}
                                     </span>
                                     <span class="entry__meta-date">发表时间：
                                         <a href="single-standard.html">{{ post.created_time }}</a>
@@ -242,7 +243,7 @@
                             <hr/>
                         </div>
                     </article>
-
+                    {% endif %}
                     {% endfor %}
 
 
