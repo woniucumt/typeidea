@@ -194,7 +194,7 @@
                         <div class="entry__text">
                             <div class="entry__header">
                                 {% if category.name  %}
-                                    <h4 style="display: inline">当前分类：{{ category.name }}</h4>
+                                    <h4 style="display: inline">当前分类：{{ category.name }} &nbsp;（共{{ post_list.count }}篇）</h4>
                                     <a href="{% url 'postlist' %}"><h4 style="display: inline;padding-left: 10px" >全部</h4></a>
                                 {% else %}
                                     <h4 style="display: inline">当前分类：全部</h4>

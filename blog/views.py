@@ -66,13 +66,12 @@ class CategoryView(postlistView):
     def get_context_data(self,**kwargs):
         context = super().get_context_data(**kwargs)
         category_id = self.kwargs.get('category_id')
-        print(category_id)
         category = get_object_or_404(Category, pk=category_id)
         context.update({
             'category':category
         })
-        print("=========")
-        print(context)
+        # print("=========")
+        # print(context)
         return context
     def get_queryset(self):
         queryset = super().get_queryset()
