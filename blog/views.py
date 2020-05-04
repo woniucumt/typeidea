@@ -58,7 +58,7 @@ class BlogIndexView(IndexView):
 class postlistView(CommonViewMixin, ListView):
     queryset = Post.latest_posts()
     # print(queryset.filter(id=11)[0].tag.all(),'lllllllllll')
-    paginate_by = 3
+    paginate_by = 5
     context_object_name = 'post_list'
     template_name = 'blog/blogpostlist.html'
 
