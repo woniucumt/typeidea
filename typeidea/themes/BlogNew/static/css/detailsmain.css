@@ -1497,7 +1497,7 @@ input::-moz-focus-inner {
 }
 
 .display-1 {
-  font-size: 5.6rem;
+  font-size: 3.2rem;
   line-height: 1.143;
   letter-spacing: -0.05rem;
   margin-top: 0;
@@ -2044,7 +2044,7 @@ display: -webkit-box;
 
 @media screen and (max-width:1400px) {
   .display-1 {
-    font-size: 5.2rem;
+    font-size: 3.2rem;
   }
 
 }
@@ -2061,7 +2061,7 @@ display: -webkit-box;
 
 @media screen and (max-width:800px) {
   .display-1 {
-    font-size: 4.6rem;
+    font-size: 3.2rem;
   }
 
   .masonry-wrap {
@@ -2090,7 +2090,7 @@ display: -webkit-box;
 
 @media screen and (max-width:600px) {
   .display-1 {
-    font-size: 4.2rem;
+    font-size: 3.2rem;
   }
 
   .masonry-wrap,
@@ -2116,7 +2116,7 @@ display: -webkit-box;
 
 @media screen and (max-width:400px) {
   .display-1 {
-    font-size: 3.7rem;
+    font-size: 2.7rem;
   }
 
   .media-wrap {
@@ -2917,7 +2917,7 @@ body.search-is-visible {
 }
 
 .content__page-header {
-  text-align: center;
+  /*text-align: center;*/
   margin-bottom: 4rem;
 }
 
