@@ -54,7 +54,7 @@ class PostAdmin(admin.ModelAdmin):
     form = PostAdminForm
     list_display = [
         'title','category','status',
-        'created_time','owner'
+        'created_time','owner','is_topped'
     ]
     list_display_links = []
 
@@ -66,7 +66,7 @@ class PostAdmin(admin.ModelAdmin):
     save_on_top = True
 
     fields = (('category','title'),
-              'desc','status','content','tag',)
+              'desc','status','is_topped','content','tag',)
 
     # fieldsets = (
     #     ('基础配置',{

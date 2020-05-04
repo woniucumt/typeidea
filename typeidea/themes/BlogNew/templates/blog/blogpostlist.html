@@ -203,10 +203,50 @@
                             <hr/>
                         </div>
                     </article> <!-- end article -->
+                    {% for post in post_list %}
+                        {% if category.name %}
+                        {% if post.is_topped %}
+                        <article class="masonry__brick entry  animate-this" >
+                            <div class="entry__text" >
+                            <div class="entry__header">
+                                <h2 class="entry__title" ><a href="{% url 'post-detail'  post.id  %}">{{ post.title }}</a>
+                                <a style="color: #ff0000;font-size: 12px;border: 1px solid #ff0000;border-radius: 10px;">&nbsp;&nbsp;顶置&nbsp;&nbsp;</a></h2>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-cat">
+                                        <a >分类 : 顶置 / {{ post.category }}</a>
+{#                                        <a >标签:{{ post.tag }}</a>#}
+                                    </span>
+                                    <span class="entry__meta-date">发表时间：
+                                        <a >{{ post.created_time }}</a>
+                                    </span>
+                                </div>
+                            </div>
+{#                            <div class="entry__excerpt">#}
+{#                                <p class="wordcut" style="min-height: 60px;" >#}
+{#                                    {{ post.desc }}#}
+{##}
+{#                                </p>#}
+{#                            </div>#}
+{#                            <hr/>#}
+                                <span  style="vertical-align: middle">
+
+                                    <img src="../../static/images/icons/read.svg" style="height: 18px;width: 18px;">
+                                    <a>阅读 (<a class="random"></a>)</a>
+                                    <img src="../../static/images/icons/dianzan.svg" style="height: 18px;width: 18px;">
+                                    <a>点赞 (<a class="random"></a>)</a>
+                                    <img src="../../static/images/icons/share.svg" style="height: 18px;width: 18px;">
+                                    <a>分享 (<a class="random"></a>)</a>
+                                </span><hr/>
+                        </div>
+
+                    </article>
+                        {% endif %}
+                        {% endif %}
+                    {% endfor %}
 
 
                     {% for post in post_list %}
-
+                        {% if not post.is_topped %}
                         <article class="masonry__brick entry  animate-this">
 
                         <div class="entry__text">
@@ -240,7 +280,7 @@
                                 </span>
                         </div>
                     </article>
-
+                    {% endif %}
                     {% endfor %}
 
                     {% if post_list.count < 3 %}
