@@ -232,11 +232,11 @@
                                 <span  style="vertical-align: middle">
 
                                     <img src="../../static/images/icons/read.svg" style="height: 18px;width: 18px;">
-                                    <a>阅读 (120)</a>
+                                    <a>阅读 (<a class="random"></a>)</a>
                                     <img src="../../static/images/icons/dianzan.svg" style="height: 18px;width: 18px;">
-                                    <a>点赞 (12)</a>
+                                    <a>点赞 (<a class="random"></a>)</a>
                                     <img src="../../static/images/icons/share.svg" style="height: 18px;width: 18px;">
-                                    <a>分享 (10086)</a>
+                                    <a>分享 (<a class="random"></a>)</a>
                                 </span>
                         </div>
                     </article>
@@ -271,9 +271,9 @@
                                 <span  style="vertical-align: middle">
 
                                     <img src="../../static/images/icons/read.svg" style="height: 18px;width: 18px;">
-                                    <a>催</a>
+                                    <a>催<a class="random"> </a></a>
                                     <img src="../../static/images/icons/dianzan.svg" style="height: 18px;width: 18px;">
-                                    <a>催催</a>
+                                    <a>催催<a class="random"> </a></a>
                                     <img src="../../static/images/icons/share.svg" style="height: 18px;width: 18px;">
                                     <a>催催催</a>
                                 </span>
@@ -340,6 +340,15 @@
     <script src="../../static/js/plugins.js"></script>
     <script src="../../static/js/detailsmain.js"></script>
     <script src="../../static/js/main2.js"></script>
+{#    生成随机数#}
+    <script type="text/javascript">
+        var ele=document.getElementsByClassName("random");
+        var count=ele.length
+        for(var i =0;i<count;i++)
+        {
+              ele[i].innerHTML=parseInt(100*Math.random())
+        }
+    </script>
 
 
 </body>

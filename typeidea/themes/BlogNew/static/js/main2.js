@@ -119,6 +119,11 @@ var dianzan8 = function () {
 	document.getElementById("dianzanimg8").setAttribute("src","../../static/images/sjb8.gif")
 
 }
+var random = function () {
+	var number = Math.random();
+	document.getElementById("random").innerHTML=number;
+
+}
 
 
 
