@@ -204,8 +204,8 @@
                         <ul class="entry__header-meta">
                             <li class="author">By <a href="#0">Woniu</a></li>
                             <li class="date">{{ post.created_time }}</li>
-                            <li class="date">查看：19</li>
-                            <li class="date">点赞：10086</li>
+                            <li class="date">查看： <a class="random"></a></li>
+                            <li class="date">点赞： <a class="random"></a></li>
 
                         </ul>
                     </div> <!-- end entry__header -->
@@ -360,7 +360,16 @@
         function dianzan(){
 	    document.getElementById("dianzan").innerHTML="Hello World";
 {#	    document.getElementsByClassName("dianzan").innerHTML="Hello World"#}
-}
-</script>
+        }
+    </script>
+{#    生成随机数#}
+    <script type="text/javascript">
+        var ele=document.getElementsByClassName("random");
+        var count=ele.length
+        for(var i =0;i<count;i++)
+        {
+              ele[i].innerHTML=parseInt(100*Math.random())
+        }
+    </script>
 
 </body>
