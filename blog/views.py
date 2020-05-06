@@ -140,6 +140,13 @@ class aboumeView(CommonViewMixin, ListView):
     context_object_name = 'post_list'
     template_name = 'aboutME/aboutme.html'
 
+class abousiteView(CommonViewMixin, ListView):
+    queryset = Post.latest_posts()
+    # print(queryset.filter(id=11)[0].tag.all(),'lllllllllll')
+    paginate_by = 5
+    context_object_name = 'post_list'
+    template_name = 'aboutME/aboutsite.html'
+
 class acaindexView(CommonViewMixin, ListView):
     queryset = Post.latest_posts()
     # print(queryset.filter(id=11)[0].tag.all(),'lllllllllll')

@@ -222,6 +222,7 @@ a:hover
             transition: opacity 1s ease;
 
     background: url(../images/aboutmebackground2.jpeg);
+    /*background: url(../images/aboutsitebg.jpg);*/
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -278,6 +279,24 @@ a:hover
 {
     margin-bottom: 1.2em;
 }
+
+.backtoindex{
+    position: absolute;
+    z-index: 11;
+    padding-top: 40px;
+    padding-left: 40px;
+    margin-left: 10px;
+}
+.backtoindexfont{
+    font-size: 5rem;
+    color: #ffffff;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+
+
+
 
 @media (max-width:1200px)
 {

@@ -21,7 +21,7 @@ from django.views.generic import TemplateView
 
 #from blog.views import post_detail,post_list
 from blog.views import IndexView, CategoryView,TagView,PostDetailView, SearchView,aboumeView
-from blog.views import acaindexView, testView, galleryView, BlogIndexView, postlistView
+from blog.views import acaindexView, testView, galleryView, BlogIndexView, postlistView,abousiteView
 from blog.views import postdetialview,acaCTView,newindexView
 from config.views import LinkListView
 from django.conf import settings
@@ -41,6 +41,7 @@ urlpatterns = [
     url(r'^$',IndexView.as_view(),name='newIndex'),  #项目的总index
     url(r'^blogindex/', BlogIndexView.as_view(), name='blog-view'),  # 博客首页
     url(r'^about/', aboumeView.as_view(),name='aboutme'),#关于我
+    url(r'^aboutsite/', abousiteView.as_view(),name='aboutsite'),#关于我
     url(r'^acaindex/', acaindexView.as_view(), name='academic-view'), #学术首页
     url(r'^gallery/', galleryView.as_view(), name='gallery-view'), #画廊首页
 
