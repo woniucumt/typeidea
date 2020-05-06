@@ -79,28 +79,8 @@
         <header class="s-header go-top2" style="z-index: 1200">
             <div class="header__top ">
 
-{#                <p id="closemenu" style="padding-bottom: 10px;margin-left: 0px;padding-left: 0px">#}
-{#                    <img src="../../static/images/closemenu.svg" style="height: 60px;width: 60px;" alt="Homepage">#}
-{#                </p>#}
                 <p style="font-size: 4rem;color: #ffffff;" ><a href="{% url 'blog-view' %}" style="color:#f0ad4e">无疆</a></p>
 
-{#                <div class="header__search">#}
-{##}
-{#                    <form role="search" method="get" class="header__search-form" action="#">#}
-{#                        <label>#}
-{#                            <span class="hide-content">Search for:</span>#}
-{#                            <input type="search" class="header__search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">#}
-{#                        </label>#}
-{#                        <input type="submit" class="header__search-submit" value="Search">#}
-{#                    </form>#}
-{##}
-{#                    <a href="#0" title="Close Search" class="header__search-close">Close</a>#}
-{##}
-{#                </div>  <!-- end header__search -->#}
-
-                <!-- toggles -->
-{#                <a href="#0" class="header__search-trigger"></a>#}
-{#                <a href="#0" class="header__menu-toggle"><span>Menu</span></a>#}
 
             </div> <!-- end header__top -->
             <p id="closemenu" style="position: absolute;right: 0px;top:40%">
@@ -117,69 +97,10 @@
                     {% for cate in navs %}
                         <li><a href="/category/{{ cate.id }}" title="">{{ cate.name }}</a></li>
                     {% endfor %}
-{#                    <li><a href="styles.html" title="">Django是基础啊</a></li>#}
-{#                    <li><a href="styles.html" title="">前端那一大堆事</a></li>#}
-{#                    <li><a href="styles.html" title="">Docker你得学啊</a></li>#}
-{#                    <li><a href="styles.html" title="">Git你得会啊</a></li>#}
-{#                    <li><a href="page-about.html" title="">Linux你学了吗</a></li>#}
-{#                    <li><a href="page-contact.html" title="">基础内功得有吧</a></li>#}
-{#                    <li><a href="page-contact.html" title="">猎杀offer的时刻到了</a></li>#}
-{#                    <li class="has-children">#}
-{#                        <a href="#0" title="">Categories</a>#}
-{#                        <ul class="sub-menu">#}
-{#                        <li><a href="category.html">Lifestyle</a></li>#}
-{#                        <li><a href="category.html">Health</a></li>#}
-{#                        <li><a href="category.html">Family</a></li>#}
-{#                        <li><a href="category.html">Management</a></li>#}
-{#                        <li><a href="category.html">Travel</a></li>#}
-{#                        <li><a href="category.html">Work</a></li>#}
-{#                        </ul>#}
-{#                    </li>#}
-{#                    <li class="has-children">#}
-{#                        <a href="#0" title="">Blog Posts</a>#}
-{#                        <ul class="sub-menu">#}
-{#                        <li><a href="single-video.html">Video Post</a></li>#}
-{#                        <li><a href="single-audio.html">Audio Post</a></li>#}
-{#                        <li><a href="single-gallery.html">Gallery Post</a></li>#}
-{#                        <li><a href="single-standard.html">Standard Post</a></li>#}
-{#                        </ul>#}
-{#                    </li>#}
-{#                    <li><a href="styles.html" title="">Styles</a></li>#}
-{#                    <li><a href="page-about.html" title="">About</a></li>#}
-{#                    <li><a href="page-contact.html" title="">Contact</a></li>#}
-                </ul> <!-- end header__nav -->
 
-{#                <ul class="header__social">#}
-{#                    <li class="ss-facebook">#}
-{#                        <a href="https://facebook.com/">#}
-{#                            <span class="screen-reader-text">Facebook</span>#}
-{#                        </a>#}
-{#                    </li>#}
-{#                    <li class="ss-twitter">#}
-{#                        <a href="#0">#}
-{#                            <span class="screen-reader-text">Twitter</span>#}
-{#                        </a>#}
-{#                    </li>#}
-{#                    <li class="ss-dribbble">#}
-{#                        <a href="#0">#}
-{#                            <span class="screen-reader-text">Dribbble</span>#}
-{#                        </a>#}
-{#                    </li>#}
-{#                    <li class="ss-pinterest">#}
-{#                        <a href="#0">#}
-{#                            <span class="screen-reader-text">Behance</span>#}
-{#                        </a>#}
-{#                    </li>#}
-{#                </ul>#}
-
+                </ul>
+                <!-- end header__nav -->
             </nav> <!-- end header__nav-wrap -->
-
-
-
-
-
-
-
         </header> <!-- end s-header -->
 {#        下面这一层是整体的布局。footer也是塞在这里面的。他填充了父窗体。#}
        <!-- site content
@@ -219,48 +140,6 @@
 
 
                     </div> <!-- end entry content -->
-{#                      前后文章#}
-{#                    <div class="entry__pagenav">#}
-{#                        <div class="entry__nav">#}
-{#                            <div class="entry__prev">#}
-{#                                <a href="#0" rel="prev">#}
-{#                                    <span>Previous Post</span>#}
-{#                                    Tips on Minimalist Design#}
-{#                                </a>#}
-{#                            </div>#}
-{#                            <div class="entry__next">#}
-{#                                <a href="#0" rel="next">#}
-{#                                    <span>Next Post</span>#}
-{#                                    Less Is More#}
-{#                                </a>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                    </div> <!-- end entry__pagenav -->#}
-{#                      相关文章#}
-{#                    <div class="entry__related">#}
-{#                        <h3 class="h2">Related Articles</h3>#}
-{##}
-{#                        <ul class="related">#}
-{#                            <li class="related__item">#}
-{#                                <a href="single-standard.html" class="related__link">#}
-{#                                    <img src="images/thumbs/masonry/walk-600.jpg" alt="">#}
-{#                                </a>#}
-{#                                <h5 class="related__post-title">Using Repetition and Patterns in Photography.</h5>#}
-{#                            </li>#}
-{#                            <li class="related__item">#}
-{#                                <a href="single-standard.html" class="related__link">#}
-{#                                    <img src="images/thumbs/masonry/dew-600.jpg" alt="">#}
-{#                                </a>#}
-{#                                <h5 class="related__post-title">Health Benefits Of Morning Dew.</h5>#}
-{#                            </li>#}
-{#                            <li class="related__item">#}
-{#                                <a href="single-standard.html" class="related__link">#}
-{#                                    <img src="images/thumbs/masonry/rucksack-600.jpg" alt="">#}
-{#                                </a>#}
-{#                                <h5 class="related__post-title">The Art Of Visual Storytelling.</h5>#}
-{#                            </li>#}
-{#                        </ul>#}
-{#                    </div> <!-- end entry related -->#}
 
                 </article> <!-- end column large-full entry-->
 
@@ -316,11 +195,6 @@
                     <span><img id='dianzanimg8' class="dianzan" onclick="dianzan8()" src="../../static/images/sjb1.gif" style="height: 80px;width: 80px;"></span>
                         <p id="dianzan8">大佬求点赞</p>
                     </div>
-
-
-
-
-
                 </div>
             </div>
 
@@ -347,7 +221,6 @@
            </canvas>
 
     </div> <!-- end s-wrap -->
-
 
     <!-- Java Script
     ================================================== -->
