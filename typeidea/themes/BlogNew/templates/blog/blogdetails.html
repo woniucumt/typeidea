@@ -105,17 +105,17 @@
 {#        下面这一层是整体的布局。footer也是塞在这里面的。他填充了父窗体。#}
        <!-- site content
         ================================================== -->
-        <div class="s-content content" style="background: rgba(255,255,255,0.8)">
+        <div class="s-content content" style="background: rgba(255,255,255,0.8);" >
             <main class="row content__page">
+                <div  class="taitou">
+                    <p style="font-size: 18px;padding-top: 10px">本文共计：{{ post.word_count }} 字，建议阅读时间：{{ post.read_time }} 分钟。</p>
+                </div>
+                <article class="column large-full entry format-standard" style="border: 1px solid #bfbfbf;">
 
-                <article class="column large-full entry format-standard">
-
-                    <div class="media-wrap entry__media">
-                        <div class="entry__post-thumb">
-                            <img src="images/thumbs/single/standard/standard-1000.jpg"
-                                 srcset="images/thumbs/single/standard/standard-2000.jpg 2000w,
-                                         images/thumbs/single/standard/standard-1000.jpg 1000w,
-                                         images/thumbs/single/standard/standard-500.jpg 500w" sizes="(max-width: 2000px) 100vw, 2000px" alt="">
+{#                  存在的意义是占位#}
+                    <div style="height: 40px">
+                        <div style="visibility: hidden">
+                            <p>占位，别想太多</p>
                         </div>
                     </div>
 

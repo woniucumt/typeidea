@@ -78,6 +78,9 @@ class Post(models.Model):
     owner = models.ForeignKey(User, verbose_name="作者", on_delete=models.DO_NOTHING)#这个ondelete是几个意思。
     created_time = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
     is_topped = models.BooleanField(default=False, verbose_name="是否顶置")
+    # 字数统计
+    word_count = models.PositiveIntegerField(default=0,verbose_name="字数统计")
+    read_time = models.PositiveIntegerField(default=12, verbose_name="建议阅读时间")
 
     pv = models.PositiveIntegerField(default=1)
     uv = models.PositiveIntegerField(default=1)
@@ -126,4 +129,5 @@ class Post(models.Model):
     def save(self, *args, **kwargs):
         # self.content_html = mistune.markdown(self.content)
         self.content_html = self.content
+        # self.word_count = len(self.content.split())
         super().save(*args, **kwargs)
