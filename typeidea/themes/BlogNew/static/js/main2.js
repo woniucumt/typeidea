@@ -81,42 +81,42 @@ var gotoByScroll = function (){
 }
 var dianzan1 = function () {
 	document.getElementById("dianzan1").innerHTML="谢谢大佬!!!";
-	document.getElementById("dianzanimg1").setAttribute("src","../../static/images/sjb8.gif")
+	document.getElementById("dianzanimg1").setAttribute("src","../../static/images/xxdl.gif")
 
 }
 var dianzan2 = function () {
 	document.getElementById("dianzan2").innerHTML="谢谢大佬!!!";
-	document.getElementById("dianzanimg2").setAttribute("src","../../static/images/sjb8.gif")
+	document.getElementById("dianzanimg2").setAttribute("src","../../static/images/xxdl.gif")
 
 }
 var dianzan3 = function () {
 	document.getElementById("dianzan3").innerHTML="谢谢大佬!!!";
-	document.getElementById("dianzanimg3").setAttribute("src","../../static/images/sjb8.gif")
+	document.getElementById("dianzanimg3").setAttribute("src","../../static/images/xxdl.gif")
 
 }
 var dianzan4 = function () {
 	document.getElementById("dianzan4").innerHTML="谢谢大佬!!!";
-	document.getElementById("dianzanimg4").setAttribute("src","../../static/images/sjb8.gif")
+	document.getElementById("dianzanimg4").setAttribute("src","../../static/images/xxdl.gif")
 
 }
 var dianzan5 = function () {
 	document.getElementById("dianzan5").innerHTML="谢谢大佬!!!";
-	document.getElementById("dianzanimg5").setAttribute("src","../../static/images/sjb8.gif")
+	document.getElementById("dianzanimg5").setAttribute("src","../../static/images/xxdl.gif")
 
 }
 var dianzan6 = function () {
 	document.getElementById("dianzan6").innerHTML="谢谢大佬!!!";
-	document.getElementById("dianzanimg6").setAttribute("src","../../static/images/sjb8.gif")
+	document.getElementById("dianzanimg6").setAttribute("src","../../static/images/xxdl.gif")
 
 }
 var dianzan7 = function () {
 	document.getElementById("dianzan7").innerHTML="谢谢大佬!!!";
-	document.getElementById("dianzanimg7").setAttribute("src","../../static/images/sjb8.gif")
+	document.getElementById("dianzanimg7").setAttribute("src","../../static/images/xxdl.gif")
 
 }
 var dianzan8 = function () {
 	document.getElementById("dianzan8").innerHTML="谢谢大佬!!!";
-	document.getElementById("dianzanimg8").setAttribute("src","../../static/images/sjb8.gif")
+	document.getElementById("dianzanimg8").setAttribute("src","../../static/images/xxdl.gif")
 
 }
 var random = function () {

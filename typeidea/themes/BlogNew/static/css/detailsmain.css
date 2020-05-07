@@ -3608,7 +3608,7 @@ body.search-is-visible {
 .dianzan:hover{
   /*transform: scale(1.2);*/
   /*opacity: 0.1;*/
-  content: url('../../static/images/sjb8.gif');
+  content: url('../../static/images/xxdl.gif');
 
   
 
@@ -3622,5 +3622,6 @@ body.search-is-visible {
   padding-left: 20px;
   color: rgba(57, 57, 58, 0.9);
   vertical-align: middle;
+  /*box-shadow: 1px 0px 20px rgba(0,0,0,0.9)*/
 }
 /*# sourceMappingURL=mainaboutme.css.map */
