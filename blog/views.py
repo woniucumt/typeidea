@@ -35,29 +35,25 @@ class CommonViewMixin:
         context = super().get_context_data(**kwargs)
         context.update({'sidebars':SideBar.get_all()})
         context.update(Category.get_navs())
-        print(Category.get_navs())
+        # print(Category.get_navs())
         return context
 #这里这个技巧真的是无语了。你看上面安格get_context_data方法，这个应该是类里的方法。但是这里没有继承任何类。
 #但是！下面的类继承这个类，那这个get_context_data方法就是下面这个类里面的了，它会自动覆盖掉原本ListView的这个函数！
 #这个技巧怕是我这样的脑子学不会的。
 class IndexView(CommonViewMixin, ListView):
     queryset = Post.latest_posts()
-    # print(queryset.filter(id=11)[0].tag.all(),'lllllllllll')
     paginate_by = 5
     context_object_name = 'post_list'
     template_name = 'newindex/newindex.html'
-    # template_name = 'd1/hhh.html'
 
 class BlogIndexView(IndexView):
     queryset = Post.latest_posts()
-    # print(queryset.filter(id=11)[0].tag.all(),'lllllllllll')
     paginate_by = 5
     context_object_name = 'post_list'
     template_name = 'blog/blogindex.html'
 
 class postlistView(CommonViewMixin, ListView):
     queryset = Post.latest_posts()
-    # print(queryset.filter(id=11)[0].tag.all(),'lllllllllll')
     paginate_by = 5
     context_object_name = 'post_list'
     template_name = 'blog/blogpostlist.html'
@@ -70,8 +66,6 @@ class CategoryView(postlistView):
         context.update({
             'category':category
         })
-        # print("=========")
-        # print(context)
         return context
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -96,7 +90,7 @@ class TagView(IndexView):
 
 
 
-
+# 基于方法的view
 # def post_detail(request, post_id=None):
 #     try:
 #         post = Post.objects.get(id=post_id)
@@ -112,7 +106,6 @@ class TagView(IndexView):
 #     return render(request,'blog/details.html',context={'post':post})
 
 class PostDetailView(CommonViewMixin,DetailView):
-    #model = Post
     queryset = Post.latest_posts()
     context_object_name = 'post'
     template_name = 'blog/blogdetails.html'
@@ -133,61 +126,45 @@ class SearchView(IndexView):
             return queryset
         return queryset.filter(Q(title__icontains=keyword) | Q(desc__icontains=keyword))
 
-class aboumeView(CommonViewMixin, ListView):
-    queryset = Post.latest_posts()
-    # print(queryset.filter(id=11)[0].tag.all(),'lllllllllll')
-    paginate_by = 5
-    context_object_name = 'post_list'
+class aboumeView(IndexView):
     template_name = 'aboutME/aboutme.html'
 
-class abousiteView(CommonViewMixin, ListView):
-    queryset = Post.latest_posts()
-    # print(queryset.filter(id=11)[0].tag.all(),'lllllllllll')
-    paginate_by = 5
-    context_object_name = 'post_list'
+class abousiteView(IndexView):
     template_name = 'aboutME/aboutsite.html'
 
 class acaindexView(CommonViewMixin, ListView):
     queryset = Post.latest_posts()
-    # print(queryset.filter(id=11)[0].tag.all(),'lllllllllll')
     paginate_by = 5
     context_object_name = 'post_list'
     template_name = 'acaindex/acaindex.html'
 
 class testView(CommonViewMixin, ListView):
     queryset = Post.latest_posts()
-    # print(queryset.filter(id=11)[0].tag.all(),'lllllllllll')
     paginate_by = 5
     context_object_name = 'post_list'
     template_name = 'test/test.html'
 
 class galleryView(CommonViewMixin, ListView):
     queryset = Post.latest_posts()
-    # print(queryset.filter(id=11)[0].tag.all(),'lllllllllll')
     paginate_by = 5
     context_object_name = 'post_list'
     template_name = 'gallery/galleryindex.html'
 
 
-
 class postdetialview(CommonViewMixin,ListView):
     queryset = Post.latest_posts()
-    # paginate_by = 5
     context_object_name = 'post'
     template_name = 'blog/blogdetails.html'
     pk_url_kwarg = 'post_id'
 
-
 class acaCTView(CommonViewMixin,ListView):
     queryset = Post.latest_posts()
-    # print(queryset.filter(id=11)[0].tag.all(),'lllllllllll')
     paginate_by = 5
     context_object_name = 'post_list'
     template_name = 'acaindex/acaCT.html'
 
 class newindexView(CommonViewMixin,ListView):
     queryset = Post.latest_posts()
-    # print(queryset.filter(id=11)[0].tag.all(),'lllllllllll')
     paginate_by = 5
     context_object_name = 'post_list'
     template_name = 'newindex/newindex.html'
