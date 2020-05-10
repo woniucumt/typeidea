@@ -36,7 +36,7 @@ class CommonViewMixin:
         context = super().get_context_data(**kwargs)
         context.update({'sidebars':SideBar.get_all()})
         context.update(Category.get_navs())
-        print(self.request.get_host())
+        print(self.request.META.get('REMOTE_ADDR'))
         # print(Category.get_navs())
         return context
 #这里这个技巧真的是无语了。你看上面安格get_context_data方法，这个应该是类里的方法。但是这里没有继承任何类。
