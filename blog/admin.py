@@ -6,7 +6,8 @@ from .adminforms import PostAdminForm
 class PostInline(admin.TabularInline):#TabularInline不知道为何。
     fields = ('title', 'desc')
     extra = 1
-    model = Post#d典型的我只知道这么配置，但是为啥我不知道，得看源码。
+    model = Post
+    #d典型的我只知道这么配置，但是为啥我不知道，得看源码。
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
@@ -44,9 +45,6 @@ class CategoryOwnerFilter(admin.SimpleListFilter):
         if category_id:
             return queryset.filter(category_id=self.values())
         return queryset
-
-
-
 
 
 @admin.register(Post )

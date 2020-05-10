@@ -21,7 +21,7 @@ class PostAdminForm(forms.ModelForm):
     content = forms.CharField(widget=CKEditorUploadingWidget(), label='正文', required=True)
     # content = forms.CharField(widget=forms.Textarea(), label='正文', required=False)
     #content = forms.CharField(widget=CKEditorUploadingWidget(), required=False)
-
+    # 下面用于，markdown和富文本共存时的配置
     # class Meta:
     #     model = Post
     #     fields = (

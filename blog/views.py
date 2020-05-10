@@ -72,7 +72,6 @@ class CategoryView(postlistView):
         category_id = self.kwargs.get('category_id')
         return queryset.filter(category_id=category_id)
 
-
 class TagView(IndexView):
     def get_context_data(self,**kwargs):
         context = super().get_context_data(**kwargs)
@@ -87,8 +86,6 @@ class TagView(IndexView):
         queryset = super().get_queryset()
         tag_id = self.kwargs.get('tag_id')
         return queryset.filter(tag__id=tag_id)
-
-
 
 # 基于方法的view
 # def post_detail(request, post_id=None):
@@ -110,7 +107,6 @@ class PostDetailView(CommonViewMixin,DetailView):
     context_object_name = 'post'
     template_name = 'blog/blogdetails.html'
     pk_url_kwarg = 'post_id'
-
 
 class SearchView(IndexView):
     def get_context_data(self):
