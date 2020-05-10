@@ -6,6 +6,7 @@ from config.models import SideBar
 from django.views.generic import DetailView, ListView
 import pprint
 from django.http import HttpResponse
+
 # Create your views here.
 #注意下面这三个参数。首先是request。url的作用就是分发request其实。于是request是发到这里的
 #另外，注意这个view是两个地方用，于是就有了两个category_id 和 tag_id的
@@ -35,6 +36,7 @@ class CommonViewMixin:
         context = super().get_context_data(**kwargs)
         context.update({'sidebars':SideBar.get_all()})
         context.update(Category.get_navs())
+        print(self.request.get_host())
         # print(Category.get_navs())
         return context
 #这里这个技巧真的是无语了。你看上面安格get_context_data方法，这个应该是类里的方法。但是这里没有继承任何类。
