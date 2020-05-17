@@ -222,11 +222,11 @@
                     <nav class="pgn" style="font-size: 20px">
                             {% if page_obj %}
                             {% if page_obj.has_previous %}
-                                <a style="font-size: 20px" href="?page={{ page_obj.previous_page_number }}">上一页 &nbsp;&nbsp;</a>
+                                <a style="font-size: 20px" href="?page={{ page_obj.previous_page_number }}#top">上一页 &nbsp;&nbsp;</a>
                             {% endif %}
                                 Page {{ page_obj.number }} of {{ paginator.num_pages }}.
                             {% if page_obj.has_next %}
-                                <a style="font-size: 20px" href="?page={{ page_obj.next_page_number }}">&nbsp;&nbsp;下一页</a>
+                                <a style="font-size: 20px" href="?page={{ page_obj.next_page_number }}#top">&nbsp;&nbsp;下一页</a>
                             {% endif %}
                             {% endif %}
                     </nav>
