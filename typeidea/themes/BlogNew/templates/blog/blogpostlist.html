@@ -165,7 +165,8 @@
 
                         <div class="entry__text">
                             <div class="entry__header">
-                                <h2 class="entry__title"><a href="{% url 'post-detail'  post.id  %}">{{ post.title }}</a></h2>
+                                <h2 class="entry__title"><a href="{% url 'post-detail'  post.id  %}">{{ post.title }}</a>
+                                <a style="color: #22aaff;font-size: 12px;border: 1px solid #22aaff;border-radius: 10px;">&nbsp;&nbsp;{{ post.is_orignal }}&nbsp;&nbsp;</a></h2>
                                 <div class="entry__meta">
                                     <span class="entry__meta-cat">
                                         <a >分类 : {{ post.category }} </a>
