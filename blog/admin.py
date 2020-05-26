@@ -64,7 +64,7 @@ class PostAdmin(admin.ModelAdmin):
     save_on_top = True
 
     fields = (('category','title'),
-              'desc','status','is_topped',('word_count','read_time'),'content','tag',)
+              'desc','status','is_topped','is_orignal',('word_count','read_time'),'content','tag',)
 
     # fieldsets = (
     #     ('基础配置',{
