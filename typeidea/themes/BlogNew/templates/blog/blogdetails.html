@@ -122,7 +122,16 @@
                     <div class="content__page-header entry__header">
                         <h1 class="display-1 entry__title">
                         {{ post.title }}
-                            <a style="color: #22aaff;font-size: 12px;border: 1px solid #22aaff;border-radius: 10px;">&nbsp;&nbsp;{{ post.is_orignal }}&nbsp;&nbsp;</a>
+                                {% if post.is_orignal == "原创" %}
+                                <a style="color: #22aaff;font-size: 12px;border: 1px solid #22aaff;border-radius: 10px;">&nbsp;&nbsp;原创&nbsp;&nbsp;</a>
+                                {% endif  %}
+                                {% if post.is_orignal == "加工" %}
+                                <a style="color: #2d00ff;font-size: 12px;border: 1px solid #2d00ff;border-radius: 10px;">&nbsp;&nbsp;加工&nbsp;&nbsp;</a>
+                                {% endif  %}
+                                {% if post.is_orignal == "转载" %}
+                                <a style="color: #ff7d1f;font-size: 12px;border: 1px solid #ff7d1f;border-radius: 10px;">&nbsp;&nbsp;转载&nbsp;&nbsp;</a>
+                                {% endif  %}
+
                         </h1>
                         <ul class="entry__header-meta">
                             <li class="author" style="color: #757578">By <a href="#0">Woniu</a></li>

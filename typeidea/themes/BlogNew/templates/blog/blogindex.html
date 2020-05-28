@@ -189,7 +189,17 @@
                         <div class="entry__text">
                             <div class="entry__header">
                                 <h2 class="entry__title"><a href="{% url 'post-detail'  post.id  %}">{{ post.title }}</a>
-                                 <a style="color: #22aaff;font-size: 12px;border: 1px solid #22aaff;border-radius: 10px;">&nbsp;&nbsp;{{ post.is_orignal }}&nbsp;&nbsp;</a></h2>
+
+                                 {% if post.is_orignal == "原创" %}
+                                <a style="color: #22aaff;font-size: 12px;border: 1px solid #22aaff;border-radius: 10px;">&nbsp;&nbsp;原创&nbsp;&nbsp;</a>
+                                {% endif  %}
+                                {% if post.is_orignal == "加工" %}
+                                <a style="color: #2d00ff;font-size: 12px;border: 1px solid #2d00ff;border-radius: 10px;">&nbsp;&nbsp;加工&nbsp;&nbsp;</a>
+                                {% endif  %}
+                                {% if post.is_orignal == "转载" %}
+                                <a style="color: #ff7d1f;font-size: 12px;border: 1px solid #ff7d1f;border-radius: 10px;">&nbsp;&nbsp;转载&nbsp;&nbsp;</a>
+                                {% endif  %}
+
                                 <div class="entry__meta">
                                     <span class="entry__meta-cat">
                                         <a href="category.html">分类:{{ post.category }}</a>
