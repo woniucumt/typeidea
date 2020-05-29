@@ -10,7 +10,7 @@ body {
     background: #222222;
 }
 
-#preload-01 { background: url(../../static/images/1234.png) no-repeat -9999px -9999px; }
+#preload-01 { background: url(../../static/images/1234.jpg) no-repeat -9999px -9999px; }
 #preload-02 { background: url(../../static/images/acaindexbg.jpeg) no-repeat -9999px -9999px; }
 #preload-03 { background: url(../../static/images/bg.jpg) no-repeat -9999px -9999px; }
 #preload-04 { background: url(../../static/images/gallerybg.jpg) no-repeat -9999px -9999px; }
