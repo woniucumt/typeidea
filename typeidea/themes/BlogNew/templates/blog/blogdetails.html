@@ -95,7 +95,7 @@
                     <li class="current"><a href={% url 'newIndex' %} style="color:#f0ad4e" >主站点</a></li>
                     <li class="current"><a href={% url 'postlist' %} style="color:#f0ad4e" >博客列表</a></li>
                     {% for cate in navs %}
-                        <li><a href="/category/{{ cate.id }}" title="">{{ cate.name }}</a></li>
+                        <li><a href="/category/{{ cate.id }}" title="">{{ cate.name }} ({{ cate.post_count }})</a></li>
                     {% endfor %}
 
                 </ul>
