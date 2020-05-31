@@ -28,7 +28,6 @@ class Category(models.Model):
         categories = cls.objects.filter(status=cls.STATUS_NORMAL)
         nav_categories = []
         normal_categories = []
-        navs_count = []
         for cate in categories:
             if cate.is_nav:
                 nav_categories.append(cate)
@@ -38,7 +37,6 @@ class Category(models.Model):
         return {
             'navs':nav_categories,
             'categories':normal_categories,
-            'navs_count':navs_count
         }
 
 
