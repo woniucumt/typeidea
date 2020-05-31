@@ -16,6 +16,7 @@ class Category(models.Model):
     is_nav = models.BooleanField(default=False, verbose_name="是否为导航")
     owner = models.ForeignKey(User, verbose_name="作者", on_delete=models.DO_NOTHING)
     created_time = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
+    post_count = models.IntegerField(default=1,verbose_name = "文章数量")
 
     class Meta:
         verbose_name = verbose_name_plural = '分类'
@@ -27,15 +28,19 @@ class Category(models.Model):
         categories = cls.objects.filter(status=cls.STATUS_NORMAL)
         nav_categories = []
         normal_categories = []
+        navs_count = []
         for cate in categories:
             if cate.is_nav:
                 nav_categories.append(cate)
+                cate.post_count = Post.objects.filter(category=cate).count()
             else:
                 normal_categories.append(cate)
         return {
             'navs':nav_categories,
             'categories':normal_categories,
+            'navs_count':navs_count
         }
+
 
 class Tag(models.Model):
     STATUS_NORMAL = 1

@@ -149,20 +149,9 @@
                     <li class="current" style="color: #ffffff"><hr/></li>
                     <li class="current"><a href={% url 'newIndex' %} style="color:#f0ad4e" >主站点</a></li>
                     <li class="current"><a href={% url 'blog-view' %} style="color:#f0ad4e" >博客主页</a></li>
-{#                    <li class="has-children">#}
-{#                        <a href="#0" title="">Categories</a>#}
-{#                        <ul class="sub-menu">#}
-{#                        <li><a href="category.html">Lifestyle</a></li>#}
-{#                        <li><a href="category.html">Health</a></li>#}
-{#                        <li><a href="category.html">Family</a></li>#}
-{#                        <li><a href="category.html">Management</a></li>#}
-{#                        <li><a href="category.html">Travel</a></li>#}
-{#                        <li><a href="category.html">Work</a></li>#}
-{#                        </ul>#}
-{#                    </li>#}
 
                     {% for cate in navs %}
-                        <li><a href="/category/{{ cate.id }}" title="">{{ cate.name }}</a></li>
+                        <li><a href="/category/{{ cate.id }}" title="">{{ cate.name }} ( {{ cate.post_count }} )</a></li>
                     {% endfor %}
                 </ul> <!-- end header__nav -->
 
