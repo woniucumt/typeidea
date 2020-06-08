@@ -6,6 +6,8 @@ from config.models import SideBar
 from django.views.generic import DetailView, ListView
 from datetime import datetime
 import os
+# import requests
+# import json
 import pprint
 from django.http import HttpResponse
 
@@ -32,11 +34,18 @@ from django.http import HttpResponse
 #     context.update(Category.get_navs())
 #
 #     return render(request, 'blog/list.html',context=context)
+
 class CommonViewMixin:
     def get_context_data(self,**kwargs):
         context = super().get_context_data(**kwargs)
         context.update({'sidebars':SideBar.get_all()})
         context.update(Category.get_navs())
+        #查询ip的接口
+        # try:
+        #     r = requests.post(url='http://pv.sohu.com/cityjson', data={'ip': '45.116.153.253'})
+        #     print(r.content)
+        # except Exception as e:
+        #     print(e)
         try:
             with open(os.path.dirname(os.path.abspath(__file__))+'visitRecord.txt', 'a') as f:
                 f.write("IP："+self.request.META.get('REMOTE_ADDR')+"日期："+str(datetime.now())+"\n")
@@ -45,9 +54,7 @@ class CommonViewMixin:
             print(e)
         # print("IP：",self.request.META.get('REMOTE_ADDR'),"日期：",datetime.now())
         return context
-#这里这个技巧真的是无语了。你看上面安格get_context_data方法，这个应该是类里的方法。但是这里没有继承任何类。
-#但是！下面的类继承这个类，那这个get_context_data方法就是下面这个类里面的了，它会自动覆盖掉原本ListView的这个函数！
-#这个技巧怕是我这样的脑子学不会的。
+
 class IndexView(CommonViewMixin, ListView):
     queryset = Post.latest_posts()
     paginate_by = 5
