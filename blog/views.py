@@ -43,10 +43,11 @@ class CommonViewMixin:
         addrString = ''
         # 查询ip的接口
         try:
-            r = requests.get(url='http://ip-api.com/json/'+self.request.META.get('REMOTE_ADDR')+'?lang=zh-CN')
+            r = requests.get(url='http://ip-api.com/json/45.116.153.253?lang=zh-CN')
             print('http://ip-api.com/json/'+self.request.META.get('REMOTE_ADDR')+'?lang=zh-CN')
             # print(type(json.loads(r.content)))
-            jsonStr = json.loads(str(r.content, encoding="gbk"))
+            # jsonStr = json.loads(str(r.content, encoding="gbk"))
+            jsonStr = json.loads(str(r.content, encoding="utf-8"))
             print(jsonStr["country"]+jsonStr["regionName"]+jsonStr["city"])
             addrString = jsonStr["country"]+jsonStr["regionName"]+jsonStr["city"]
         except Exception as e:
