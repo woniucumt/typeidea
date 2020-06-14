@@ -47,6 +47,7 @@ class CommonViewMixin:
             print('http://whois.pconline.com.cn/ipJson.jsp?'+self.request.META.get('REMOTE_ADDR')+'&json=true')
             # print(type(json.loads(r.content)))
             jsonStr = json.loads(str(r.content, encoding="gbk"))
+            print(jsonStr)
             addrString = jsonStr["pro"]+jsonStr["city"]+jsonStr["addr"]
         except Exception as e:
             print(e)
