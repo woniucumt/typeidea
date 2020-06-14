@@ -42,15 +42,16 @@ class CommonViewMixin:
         context.update(Category.get_navs())
         addrString = ''
         # 查询ip的接口
-        r = requests.get(
-            url='http://whois.pconline.com.cn/ipJson.jsp?' + self.request.META.get('REMOTE_ADDR') + '&json=true')
-        print('http://whois.pconline.com.cn/ipJson.jsp?' + self.request.META.get('REMOTE_ADDR') + '&json=true')
-        # print(type(json.loads(r.content)))
-        jsonStr = json.loads(str(r.content, encoding="gbk"))
-        print(jsonStr)
-        addrString = jsonStr["pro"] + jsonStr["city"] + jsonStr["addr"]
         try:
-
+            r = requests.get(url='http://ip-api.com/json/'+self.request.META.get('REMOTE_ADDR')+'?lang=zh-CN')
+            print('http://ip-api.com/json/'+self.request.META.get('REMOTE_ADDR')+'?lang=zh-CN')
+            # print(type(json.loads(r.content)))
+            jsonStr = json.loads(str(r.content, encoding="gbk"))
+            print(jsonStr["country"]+jsonStr["regionName"]+jsonStr["city"])
+            addrString = jsonStr["country"]+jsonStr["regionName"]+jsonStr["city"]
+        except Exception as e:
+            print(e)
+        try:
             with open(os.path.dirname(os.path.abspath(__file__))+'visitRecord.txt', 'a') as f:
                 f.write("IP："+self.request.META.get('REMOTE_ADDR')+"日期："+addrString+str(datetime.now())+"\n")
                 f.close()
