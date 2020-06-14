@@ -48,8 +48,9 @@ class CommonViewMixin:
             # print(type(json.loads(r.content)))
             jsonStr = json.loads(str(r.content, encoding="gbk"))
             # jsonStr = json.loads(str(r.content, encoding="utf-8"))
-            print(jsonStr["country"]+jsonStr["regionName"]+jsonStr["city"])
-            addrString = jsonStr["country"]+jsonStr["regionName"]+jsonStr["city"]
+            # print(jsonStr["country"]+jsonStr["regionName"]+jsonStr["city"])
+            # addrString = jsonStr["country"]+jsonStr["regionName"]+jsonStr["city"]
+            addrString = jsonStr["addr"]
         except Exception as e:
             print(e)
         try:
