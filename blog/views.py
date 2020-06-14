@@ -6,8 +6,8 @@ from config.models import SideBar
 from django.views.generic import DetailView, ListView
 from datetime import datetime
 import os
-# import requests
-# import json
+import requests
+import json
 import pprint
 from django.http import HttpResponse
 
@@ -40,15 +40,19 @@ class CommonViewMixin:
         context = super().get_context_data(**kwargs)
         context.update({'sidebars':SideBar.get_all()})
         context.update(Category.get_navs())
-        #查询ip的接口
-        # try:
-        #     r = requests.post(url='http://pv.sohu.com/cityjson', data={'ip': '45.116.153.253'})
-        #     print(r.content)
-        # except Exception as e:
-        #     print(e)
+        addrString = ''
+        # 查询ip的接口
+        try:
+            r = requests.get(url='http://whois.pconline.com.cn/ipJson.jsp?'+self.request.META.get('REMOTE_ADDR')+'&json=true')
+            print('http://whois.pconline.com.cn/ipJson.jsp?'+self.request.META.get('REMOTE_ADDR')+'&json=true')
+            # print(type(json.loads(r.content)))
+            jsonStr = json.loads(str(r.content, encoding="gbk"))
+            addrString = jsonStr["pro"]+jsonStr["city"]+jsonStr["addr"]
+        except Exception as e:
+            print(e)
         try:
             with open(os.path.dirname(os.path.abspath(__file__))+'visitRecord.txt', 'a') as f:
-                f.write("IP："+self.request.META.get('REMOTE_ADDR')+"日期："+str(datetime.now())+"\n")
+                f.write("IP："+self.request.META.get('REMOTE_ADDR')+"日期："+addrString+str(datetime.now())+"\n")
                 f.close()
         except Exception as e:
             print(e)
