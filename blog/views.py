@@ -43,7 +43,7 @@ class CommonViewMixin:
         addrString = ''
         # 查询ip的接口
         try:
-            r = requests.get(url='http://whois.pconline.com.cn/ipJson.jsp?ip='+self.request.META.get('REMOTE_ADDR')+'&json=true')
+            r = requests.get(url='http://whois.pconline.com.cn/ipJson.jsp?ip='+str(self.request.META.get('REMOTE_ADDR'))+'&json=true')
             print('http://whois.pconline.com.cn/ipJson.jsp?ip='+self.request.META.get('REMOTE_ADDR')+'&json=true')
             # print(type(json.loads(r.content)))
             jsonStr = json.loads(str(r.content, encoding="gbk"))
