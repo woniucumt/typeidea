@@ -2903,12 +2903,12 @@ body.search-is-visible {
  * ## content
  * ------------------------------------------------------------------- */
 .s-content {
-  padding-top: 6.4rem;
+  padding-top: 3.4rem;
 }
 
 .content__page {
-  max-width: 900px;
-  padding-bottom: 12rem;
+  max-width: 1200px;
+  padding-bottom: 6rem;
 }
 
 .content__page img {
