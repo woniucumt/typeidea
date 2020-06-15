@@ -127,7 +127,7 @@ class TagView(IndexView):
 class PostDetailView(CommonViewMixin,DetailView):
     queryset = Post.latest_posts()
     context_object_name = 'post'
-    template_name = 'blog/blogdetails.html'
+    template_name = 'blog/blogdetails2.html'
     pk_url_kwarg = 'post_id'
 
 class SearchView(IndexView):

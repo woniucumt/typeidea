@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Standard Post - Typerite</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../../static/css/base.css">
+    <link rel="stylesheet" href="../../static/css/vendor.css">
+    <link rel="stylesheet" href="../../static/css/detailsmain2.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="../../static/js/modernizr.js"></script>
+    <script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../static/js/bootstrap.js"></script>
+
+
+</head>
+
+<body class="ss-bg-white">
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="top" class="s-wrap site-wrapper">
+
+        <!-- site header
+        ================================================== -->
+        <header class="s-header header">
+
+            <div class="header__top">
+                    <p style="font-size: 4rem;color: #ffffff;" ><a href="{% url 'blog-view' %}" style="color:#f0ad4e">无疆</a></p>
+                </div>
+            <div class="header__top">
+                <div class="header__search">
+
+                    <form role="search" method="get" class="header__search-form" action="#">
+                        <label>
+                            <span class="hide-content">Search for:</span>
+                            <input type="search" class="header__search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">
+                        </label>
+                        <input type="submit" class="header__search-submit" value="Search">
+                    </form>
+
+                    <a href="#0" title="Close Search" class="header__search-close">Close</a>
+
+                </div>  <!-- end header__search -->
+
+                <!-- toggles -->
+                <a href="#0" class="header__search-trigger"></a>
+                <a href="#0" class="header__menu-toggle"><span>Menu</span></a>
+
+            </div>
+
+            <nav class="header__nav-wrap">
+
+                <ul class="header__nav">
+{#                    <li id="closemenu">关闭菜单</li>#}
+                    <li class="current" style="color: #ffffff">当前位置：博客详情</li>
+                    <li class="current" style="color: #ffffff"><hr/></li>
+                    <li class="current"><a href={% url 'newIndex' %} style="color:#f0ad4e" >主站点</a></li>
+                    <li class="current"><a href={% url 'postlist' %} style="color:#f0ad4e" >博客列表</a></li>
+                    {% for cate in navs %}
+                        <li><a href="/category/{{ cate.id }}" title="">{{ cate.name }} ({{ cate.post_count }})</a></li>
+                    {% endfor %}
+
+                </ul>
+
+            </nav> <!-- end header__nav-wrap -->
+
+        </header> <!-- end s-header -->
+
+
+        <!-- site content
+        ================================================== -->
+        <div class="s-content content">
+            <main class="row content__page">
+
+                <article class="column large-full entry format-standard">
+
+{#                    <div class="media-wrap entry__media">#}
+{#                        可以再这部分添加抬头图片。#}
+{#                    </div>#}
+
+                    <div class="content__page-header entry__header">
+                        <h1 class="display-1 entry__title">
+                        {{ post.title }}
+                                {% if post.is_orignal == "原创" %}
+                                <a style="color: #22aaff;font-size: 12px;border: 1px solid #22aaff;border-radius: 10px;">&nbsp;&nbsp;原创&nbsp;&nbsp;</a>
+                                {% endif  %}
+                                {% if post.is_orignal == "加工" %}
+                                <a style="color: #2d00ff;font-size: 12px;border: 1px solid #2d00ff;border-radius: 10px;">&nbsp;&nbsp;加工&nbsp;&nbsp;</a>
+                                {% endif  %}
+                                {% if post.is_orignal == "转载" %}
+                                <a style="color: #ff7d1f;font-size: 12px;border: 1px solid #ff7d1f;border-radius: 10px;">&nbsp;&nbsp;转载&nbsp;&nbsp;</a>
+                                {% endif  %}
+
+                        </h1>
+                        <ul class="entry__header-meta">
+                            <li class="author" style="color: #757578">By <a href="#0">Woniu</a></li>
+                            <li class="date" style="color: #757578">{{ post.created_time }}</li>
+                            <li class="date" style="color: #757578">查看： <a class="random"></a></li>
+                            <li class="date" style="color: #757578">点赞： <a class="random"></a></li>
+
+                        </ul>
+                        <hr/>
+                    </div> <!-- end entry__header -->
+
+                    <div class="entry__content">
+                        {#                    我暂时当你是markdown的吧#}
+                    <div class="entry__content">
+                            {% autoescape off %}
+                                {{ post.content }}
+                            {% endautoescape %}
+                    </div> <!-- end entry content -->
+                    </div> <!-- end entry content -->
+
+                </article> <!-- end column large-full entry-->
+
+{#                  文章结束后的个人部分#}
+                    <div class="column large-12 comment-respond">
+                        <!-- START respond -->
+                        <div id="respond" style="text-align: center">
+                            <div style="padding-top: 80px;">
+                                 <span style="color: #757578" >---------END---------</span>
+                            </div>
+                            <div style="background:rgb(249,250,251);margin-top: 5rem;border-radius: 20px;">
+                                <div style="display: inline-block;vertical-align:middle">
+                                    <img src="../../static/images/icons/touxiang.jpeg" style="height: 130px;width: 130px;border-radius: 100%">
+                                </div>
+                                <div style="display: inline-block;vertical-align:middle;text-align: left;padding-left: 20px">
+                                  <p class='footbanner' style="color: #535354"> 进击的蜗牛</p>
+                                  <p class='footbanner' style="color: #535354"> 写博客不易，且看且珍惜。</p>
+                                  <p class='footbanner' style="color: #535354"> 博文仅供参考。如有错误，欢迎指正！</p>
+                                  <p class='footbanner' style="color: #535354"> 如果觉得这篇文章有用，欢迎转载，转载请注明出处！</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- END respond-->
+                    </div> <!-- end comment-respond -->
+            </main>
+        </div> <!-- end s-content -->
+
+        <!-- footer
+        ================================================== -->
+        <footer class="s-footer footer">
+            <div class="row">
+                <div class="column large-full footer__content">
+                    <div class="footer__copyright">
+                        <span>© Copyright Woniu 2020</span>
+                        <span>Powered By Django</span>
+                    </div>
+                    <div class="footer__copyright">
+                        <span>Code Version:v2.0-Beta</span>
+                        <span>Theme Version:v2.0.1-Beta</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top"></a>
+            </div>
+        </footer>
+
+    </div> <!-- end s-wrap -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="../../static/js/jquery-3.2.1.min.js"></script>
+    <script src="../../static/js/plugins.js"></script>
+    <script src="../../static/js/detailsmain2.js"></script>
+{#    生成随机数#}
+    <script type="text/javascript">
+        var ele=document.getElementsByClassName("random");
+        var count=ele.length
+        for(var i =0;i<count;i++)
+        {
+              ele[i].innerHTML=parseInt(100*Math.random())
+        }
+    </script>
+</body>
