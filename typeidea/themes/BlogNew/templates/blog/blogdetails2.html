@@ -94,7 +94,8 @@
         <div class="s-content content">
             <main class="row content__page">
 
-                <article class="column large-full entry format-standard">
+                <article class="column large-full entry format-standard"
+                         style="background-color: #f9fafb;padding-top: 40px;padding-bottom: 40px;border-radius: 20px;">
 
 {#                    <div class="media-wrap entry__media">#}
 {#                        可以再这部分添加抬头图片。#}
@@ -125,12 +126,12 @@
                     </div> <!-- end entry__header -->
 
                     <div class="entry__content">
-                        {#                    我暂时当你是markdown的吧#}
-                    <div class="entry__content">
-                            {% autoescape off %}
-                                {{ post.content }}
-                            {% endautoescape %}
-                    </div> <!-- end entry content -->
+                            {#                    我暂时当你是markdown的吧#}
+                        <div class="entry__content">
+                                {% autoescape off %}
+                                    {{ post.content }}
+                                {% endautoescape %}
+                        </div> <!-- end entry content -->
                     </div> <!-- end entry content -->
 
                 </article> <!-- end column large-full entry-->
@@ -139,7 +140,7 @@
                     <div class="column large-12 comment-respond">
                         <!-- START respond -->
                         <div id="respond" style="text-align: center">
-                            <div style="padding-top: 80px;">
+                            <div style="padding-top: 40px;">
                                  <span style="color: #757578" >---------END---------</span>
                             </div>
                             <div style="background:rgb(249,250,251);margin-top: 5rem;border-radius: 20px;">
