@@ -72,7 +72,7 @@ class BlogIndexView(IndexView):
     queryset = Post.latest_posts()
     paginate_by = 12
     context_object_name = 'post_list'
-    template_name = 'blog/blogindex.html'
+    template_name = 'blog/blogindex2.html'
 
 class postlistView(CommonViewMixin, ListView):
     queryset = Post.latest_posts()

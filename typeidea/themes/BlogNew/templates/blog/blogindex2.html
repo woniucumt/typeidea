@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zh">
+<html class="no-js" lang="en">
 <head>
 
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>博客主页</title>
+    <title>Typerite</title>
     <meta name="description" content="">
     <meta name="author" content="">
-
 
     <!-- mobile specific metas
     ================================================== -->
@@ -16,33 +15,29 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="../../static/css/base.css">
-    <link rel="stylesheet" href="../../static/css/vendor.css">
-    <link rel="stylesheet" href="../../static/css/main.css">
-
-
+    <link rel="stylesheet" href="../../static/css/blogindexbase.css">
+    <link rel="stylesheet" href="../../static/css/blogindexvendor.css">
+    <link rel="stylesheet" href="../../static/css/blogindexmain.css">
+    <link href="../../static/css/blogindexstyle.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../static/css/blogindexboostrap.css" rel="stylesheet" type="text/css" media="all" />
 
     <!-- script
     ================================================== -->
     <script src="../../static/js/modernizr.js"></script>
-    <script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="../../static/js/bootstrap.js"></script>
 
     <!-- favicons
     ================================================== -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link href="../../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="../../static/css/slider.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="../../static/css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="../../static/css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
 
 
 </head>
 
 <body>
-{#预加载#}
+
+    <!-- preloader
+    ================================================== -->
     <div id="preloader">
         <div id="loader" class="dots-fade">
             <div></div>
@@ -50,78 +45,50 @@
             <div></div>
         </div>
     </div>
-<div class="agileits_main">
+    <div class="agileits_main">
     <!-- header -->
-	<div class="container">
-		<div class="w3_agile_logo">
-			<h1 style="padding-top: 4rem"><a href="{% url 'newIndex' %}">无疆</a></h1>
-		</div>
-		<div class="agileits_w3layouts_nav">
-{#			<div id="toggle_m_nav">#}
-{#				<div id="m_nav_menu" class="m_nav">#}
-{#					<div class="m_nav_ham w3_agileits_ham" id="m_ham_1"></div>#}
-{#					<div class="m_nav_ham" id="m_ham_2"></div>#}
-{#					<div class="m_nav_ham" id="m_ham_3"></div>#}
-{#				</div>#}
-{#			</div>#}
-			<div id="m_nav_container" class="m_nav wthree_bg">
-				<nav class="menu menu--sebastian">
-					<ul id="m_nav_list" class="m_nav menu__list">
-						<li class="m_nav_item menu__item menu__item--current" id="m_nav_item_1"> <a href="index.html" class="menu__link"> Home </a></li>
-						<li class="m_nav_item menu__item" id="moble_nav_item_2"> <a href="#about" class="menu__link"> About Us </a> </li>
-						<li class="m_nav_item menu__item" id="moble_nav_item_3"> <a href="#services" class="menu__link">Services</a> </li>
-						<li class="m_nav_item menu__item" id="moble_nav_item_4"> <a href="#essentials" class="menu__link">Essentials  </a> </li>
-						<li class="m_nav_item menu__item" id="moble_nav_item_5"> <a href="#blog" class="menu__link">Blog</a> </li>
-						<li class="m_nav_item menu__item" id="moble_nav_item_6"> <a href="#contact" class="menu__link"> Contact </a> </li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</div>
-	<!--// header -->
-	<!-- banner -->
-	<div class="w3_banner">
-	    <div class="container">
-		    <div class="slider">
-			    <div class="callbacks_container">
-				   <ul class="rslides callbacks callbacks1" id="slider4">
-					    <li>
-						    <div class="banner_text_w3layouts">
-								<h3 style="color: #ffffff;">人生天地间 忽如远行客</h3>
-								<p>行者无疆</p>
-                                <a  class="smoothscroll" href="#top"><div class="animate-bounce-up"></div></a>
-{#								<div class="w3-button">#}
-{#									<a href="#" data-toggle="modal" >Read More</a>#}
-{#								</div>#}
-						    </div>
-					    </li>
-			    	</ul>
-				</div>
-		   </div>
-		</div>
-	</div>
-	<!-- //banner -->
-</div>
+        <div class="container">
+            <div class="w3_agile_logo">
+                <h1><a href="index.html">Toddler</a></h1>
+            </div>
+            <div class="agileits_w3layouts_nav">
+            </div>
+        </div>
+        <!--// header -->
+        <!-- banner -->
+        <div class="w3_banner">
+            <div class="container">
+                <div class="slider">
+                    <div class="callbacks_container">
+                       <ul class="rslides callbacks callbacks1" id="slider4">
+                            <li>
+                                <div class="banner_text_w3layouts">
+                                    <h3 style="color: #ffffff;">人生天地间 忽如远行客</h3>
+								    <p>行者无疆</p>
+                                    <a  class="smoothscroll" href="#top"><div class="animate-bounce-up"></div></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+               </div>
+            </div>
+        </div>
+        <!-- //banner -->
+    </div>
 
-    <!-- preloader
-    ================================================== -->
-{#    <div id="preloader">#}
-{#        <div id="loader" class="dots-fade">#}
-{#            <div></div>#}
-{#            <div></div>#}
-{#            <div></div>#}
-{#        </div>#}
-{#    </div>#}
-
-    <div id="top" class="s-wrap site-wrapper">
+    <div id="top" class="s-wrap site-wrapper" style="background-color: #f6f7f8">
 
         <!-- site header
         ================================================== -->
-{#        <header class="s-header go-top2">#}
-{#        如果要实现侧滑可以用上面的例子#}
         <header class="s-header go-top2">
-            <div class="header__top ">
-                    <p style="font-size: 4rem;color: #ffffff;" >无疆</p>
+
+            <div class="header__top">
+                <div class="header__logo">
+                    <a class="site-logo" href="index.html">
+                        <p style="font-size: 4rem;color: #ffffff;" ><a href="{% url 'blog-view' %}" style="color:#f0ad4e">无疆</a></p>
+                    </a>
+                </div>
+
                 <div class="header__search">
 
                     <form role="search" method="get" class="header__search-form" action="#">
@@ -145,20 +112,18 @@
             <nav class="header__nav-wrap">
 
                 <ul class="header__nav">
-                    <li class="current" style="color: #ffffff">当前位置：博客主页</li>
+{#                    <li id="closemenu">关闭菜单</li>#}
+                    <li class="current" style="color: #ffffff">当前位置：博客详情</li>
                     <li class="current" style="color: #ffffff"><hr/></li>
                     <li class="current"><a href={% url 'newIndex' %} style="color:#f0ad4e" >主站点</a></li>
-                    <li class="current"><a href={% url 'blog-view' %} style="color:#f0ad4e" >博客主页</a></li>
-
+                    <li class="current"><a href={% url 'postlist' %} style="color:#f0ad4e" >博客列表</a></li>
                     {% for cate in navs %}
-                        <li><a href="/category/{{ cate.id }}" title="">{{ cate.name }} ( {{ cate.post_count }} )</a></li>
+                        <li><a href="/category/{{ cate.id }}" title="">{{ cate.name }} ({{ cate.post_count }})</a></li>
                     {% endfor %}
-                </ul> <!-- end header__nav -->
 
+                </ul>
 
             </nav> <!-- end header__nav-wrap -->
-
-
 
         </header> <!-- end s-header -->
 
@@ -170,15 +135,26 @@
 
                     <div class="grid-sizer"></div>
 
-                       {% for post in post_list %}
-                           {% if not post.is_topped %}
+                    <article class="masonry__brick entry format-quote animate-this" >
 
-                        <article class="masonry__brick entry  animate-this">
+                        <div class="entry__thumb" style="background-color: #e7e8e9">
+                            <blockquote>
+                                <p>求实习！！！各位大佬求求实习！！！</p>
+
+                                <cite>记录，总结，领悟</cite>
+                            </blockquote>
+                        </div>
+
+                    </article> <!-- end article -->
+
+
+                    {% for post in post_list %}
+                    {% if not post.is_topped %}
+                    <article class="masonry__brick entry format-audio animate-this" style="border-radius: 20px">
 
                         <div class="entry__text">
                             <div class="entry__header">
                                 <h2 class="entry__title"><a href="{% url 'post-detail'  post.id  %}">{{ post.title }}</a></h2>
-
                                 {% if post.is_orignal == "原创" %}
                                 <a style="color: #22aaff;font-size: 12px;border: 1px solid #22aaff;border-radius: 10px;">&nbsp;&nbsp;原创&nbsp;&nbsp;</a>
                                 {% endif  %}
@@ -194,7 +170,6 @@
                                         <a href="category.html">分类:{{ post.category }}</a>
 {#                                        <a href="category.html">标签:{{ post.tag }}</a>#}
                                     </span>
-                                    <br>
                                     <span class="entry__meta-date">发表时间：
                                         <a href="single-standard.html">{{ post.created_time }}</a>
                                     </span>
@@ -205,12 +180,22 @@
                                     {{ post.desc }}
                                 </p>
                             </div>
-                            <hr/>
                         </div>
-                    </article>
+
+                    </article> <!-- end article -->
                     {% endif %}
                     {% endfor %}
+                    <article class="masonry__brick entry format-link animate-this">
+                        <div class="entry__thumb">
+                            <div class="link-wrap">
+                                <h2>Powerful web & Wordpress hosting. Guaranteed. Starting at $2.59/mo!</h2>
+                                <cite>
+                                    <a target="_blank" href="https://www.dreamhost.com/r.cgi?287326">https://www.dreamhost.com</a>
+                                </cite>
+                            </div>
+                        </div>
 
+                    </article> <!-- end article -->
 
 
                 </div> <!-- end masonry -->
@@ -219,16 +204,18 @@
 
             <div class="row">
                 <div class="column large-full">
-                    <nav class="pgn" style="font-size: 20px">
-                            {% if page_obj %}
-                            {% if page_obj.has_previous %}
-                                <a style="font-size: 20px" href="?page={{ page_obj.previous_page_number }}#top">上一页 &nbsp;&nbsp;</a>
-                            {% endif %}
-                                Page {{ page_obj.number }} of {{ paginator.num_pages }}.
-                            {% if page_obj.has_next %}
-                                <a style="font-size: 20px" href="?page={{ page_obj.next_page_number }}#top">&nbsp;&nbsp;下一页</a>
-                            {% endif %}
-                            {% endif %}
+                    <nav class="pgn">
+                        <ul>
+                            <li><a class="pgn__prev" href="#0">Prev</a></li>
+                            <li><a class="pgn__num" href="#0">1</a></li>
+                            <li><span class="pgn__num current">2</span></li>
+                            <li><a class="pgn__num" href="#0">3</a></li>
+                            <li><a class="pgn__num" href="#0">4</a></li>
+                            <li><a class="pgn__num" href="#0">5</a></li>
+                            <li><span class="pgn__num dots">…</span></li>
+                            <li><a class="pgn__num" href="#0">8</a></li>
+                            <li><a class="pgn__next" href="#0">Next</a></li>
+                        </ul>
                     </nav>
                 </div>
             </div>

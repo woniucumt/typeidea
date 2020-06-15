@@ -273,17 +273,36 @@
 
         var pxShow      = 400,
             goTopButton = $(".go-top2")
-
-        // Show or hide the button
-        if ($(window).scrollTop() >= pxShow) goTopButton.addClass('link-is-visible');
-
-        $(window).on('scroll', function() {
+        // alert("why");
+        // goTopButton.addClass('link-is-visible')
+        if(document.body.clientWidth< 1000)
+        {
+            alert(document.body.clientWidth);
+            if(goTopButton.hasClass('link-is-visible')) goTopButton.removeClass('link-is-visible')
+            if(goTopButton.hasClass('dependheight')) goTopButton.removeClass('dependheight')
+        }
+        if (document.body.clientWidth > 1000)
+        {
+            goTopButton.addClass('dependheight')
+            goTopButton.removeClass('link-is-visible')
+            if ($(window).scrollTop() >= pxShow )
+            {
+                goTopButton.addClass('link-is-visible');
+            }
+            $(window).on('scroll', function() {
             if ($(window).scrollTop() >= pxShow) {
                 if(!goTopButton.hasClass('link-is-visible')) goTopButton.addClass('link-is-visible')
             } else {
+
                 goTopButton.removeClass('link-is-visible')
             }
         });
+        }
+
+        // Show or hide the button
+
+
+
     };
 
 
