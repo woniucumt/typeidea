@@ -2211,8 +2211,6 @@ input::-moz-focus-inner {
   max-width: 100%;
   background-color: #151515;
   margin-top: 3.2rem;
-      position: inherit;
-    position: static;
 }
 
 .header__nav-wrap a {
@@ -2337,8 +2335,6 @@ input::-moz-focus-inner {
   left: 9px;
   right: auto;
   bottom: auto;
-      position: inherit;
-    position: static;
 }
 
 .header__menu-toggle span::before,
@@ -2392,8 +2388,6 @@ input::-moz-focus-inner {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-      position: inherit;
-    position: static;
 }
 
 .header__social li {
@@ -2412,8 +2406,6 @@ input::-moz-focus-inner {
   width: 3.6rem;
   border-radius: 50%;
   position: relative;
-      position: inherit;
-    position: static;
 }
 
 .header__social a::after {
@@ -2543,8 +2535,6 @@ input::-moz-focus-inner {
   left: 0;
   width: 100%;
   height: 100%;
-      position: inherit;
-    position: static;
 }
 
 .header__search-form {
@@ -2644,8 +2634,6 @@ body.search-is-visible {
 .search-is-visible .header__search {
   opacity: 1;
   visibility: visible;
-      position: inherit;
-    position: static;
 }
 
 /* ------------------------------------------------------------------- 
@@ -2662,8 +2650,6 @@ body.search-is-visible {
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
-      position: inherit;
-    position: static;
 }
 
 .header__search-close::before,
@@ -2676,8 +2662,6 @@ body.search-is-visible {
   top: 12px;
   left: 22px;
   background-color: #000000;
-      position: inherit;
-    position: static;
 }
 
 .header__search-close::before {
@@ -2722,8 +2706,6 @@ body.search-is-visible {
     position: static;
     top: 0;
     bottom: auto;
-        position: inherit;
-    position: static;
   }
 
   .header__top {
@@ -2767,7 +2749,7 @@ body.search-is-visible {
     margin: 0;
     padding: 164px 60px 64px;
     overflow-y: auto;
-        position: inherit;
+          position: inherit;
     position: static;
   }
 
@@ -2785,8 +2767,6 @@ body.search-is-visible {
   }
 
   .header__nav {
-        position: inherit;
-    position: static;
     font-size: 20px;
     border-top: 1px dotted rgba(255, 255, 255, 0.04);
   }
