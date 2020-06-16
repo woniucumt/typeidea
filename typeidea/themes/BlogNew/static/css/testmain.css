@@ -2524,6 +2524,7 @@ input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 .header__search {
   z-index: 400;
+  transform: translateZ(120px);
   display: block;
   text-align: center;
   background-color: #ffffff;
@@ -2736,6 +2737,7 @@ body.search-is-visible {
 
   .header__nav-wrap {
     z-index: 99;
+    transform: translateZ(120px);
     background: #151515;
     opacity: 0;
     visibility: hidden;
@@ -2792,6 +2794,7 @@ body.search-is-visible {
 
   .header__menu-toggle {
     z-index: 101;
+    transform: translateZ(120px);
     display: block;
   }
 
