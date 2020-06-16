@@ -2726,6 +2726,9 @@ body.search-is-visible {
     position: absolute;
     top: 50%;
     left: 4rem;
+       position: inherit;
+    position: static;
+
   }
 
   .header__logo img {
@@ -2738,7 +2741,7 @@ body.search-is-visible {
     background: #151515;
     opacity: 0;
     visibility: hidden;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -2748,8 +2751,9 @@ body.search-is-visible {
     justify-content: flex-start;
     margin: 0;
     padding: 164px 60px 64px;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow-y: auto;
+       position: inherit;
+    position: static;
   }
 
   .nav-wrap-is-visible .header__top {
@@ -2759,6 +2763,8 @@ body.search-is-visible {
   .nav-wrap-is-visible .header__nav-wrap {
     opacity: 1;
     visibility: visible;
+       position: inherit;
+    position: static;
   }
 
   .nav-wrap-is-visible .header__search-trigger {
@@ -2768,6 +2774,8 @@ body.search-is-visible {
   .header__nav {
     font-size: 20px;
     border-top: 1px dotted rgba(255, 255, 255, 0.04);
+       position: inherit;
+    position: static;
   }
 
   .header__nav > li {
@@ -2801,6 +2809,8 @@ body.search-is-visible {
     width: 20px;
     top: 29px;
     right: 9.8rem;
+       position: inherit;
+    position: static;
   }
 
   .header__search-trigger::before,
@@ -2810,6 +2820,8 @@ body.search-is-visible {
 
   .header__social {
     margin-top: 8rem;
+       position: inherit;
+    position: static;
   }
 
   .header__social a {
@@ -2835,6 +2847,8 @@ body.search-is-visible {
 @media screen and (max-width:800px) {
   .header__nav {
     font-size: 18px;
+       position: inherit;
+    position: static;
   }
 
   .header__nav > li > a {
@@ -2854,6 +2868,8 @@ body.search-is-visible {
 @media screen and (max-width:600px) {
   .header__search-form input[type="search"] {
     font-size: 3.4rem;
+       position: inherit;
+    position: static;
   }
 
 }
@@ -2868,10 +2884,14 @@ body.search-is-visible {
 @media screen and (max-width:400px) {
   .header__logo {
     left: 3rem;
+       position: inherit;
+    position: static;
   }
 
   .header__nav-wrap {
     padding: 140px 40px 64px;
+       position: inherit;
+    position: static;
   }
 
   .header__menu-toggle {
@@ -2884,6 +2904,8 @@ body.search-is-visible {
 
   .header__search-form input[type="search"] {
     font-size: 2.6rem;
+       position: inherit;
+    position: static;
   }
 
 }
@@ -3015,6 +3037,8 @@ body.search-is-visible {
   .s-footer {
     padding-left: 290px;
     padding-right: 80px;
+       position: inherit;
+    position: static;
   }
 
 }
@@ -3044,6 +3068,9 @@ body.search-is-visible {
 @media screen and (max-width:600px) {
   .s-content {
     padding-top: 12.6rem;
+    z-index: 1;
+       position: inherit;
+    position: static;
   }
 
   .content__page {
