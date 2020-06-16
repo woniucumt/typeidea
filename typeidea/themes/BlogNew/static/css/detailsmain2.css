@@ -2716,7 +2716,7 @@ body.search-is-visible {
     position: fixed;
     top: 0;
     left: 0;
-    position: inherit;
+
     position: static;
   }
 
