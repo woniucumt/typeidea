@@ -2966,26 +2966,13 @@ body.search-is-visible {
 
 .go-top a,
 .go-top a:visited {
+
 }
 
 .go-top.link-is-visible {
   visibility: visible;
 }
-/* -------------------------------------------------------------------
- * ## go-top-safari
- * ------------------------------------------------------------------- */
-.go-top-safari {
-  z-index: 1;
-  position: fixed;
-}
 
-.go-top-safari a,
-.go-top-safari a:visited {
-}
-
-.go-top-safari.link-is-visible {
-  visibility: visible;
-}
 
 /* ------------------------------------------------------------------- 
  * responsive:
