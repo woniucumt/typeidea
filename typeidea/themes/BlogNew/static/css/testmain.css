@@ -2710,7 +2710,7 @@ body.search-is-visible {
 
   .header__top {
     z-index: 199;
-    transform: translateZ(100px);
+    overflow:hidden;
     background: #22aaff;
     width: 100%;
     height: 78px;
