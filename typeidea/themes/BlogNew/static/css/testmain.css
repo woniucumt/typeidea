@@ -2875,6 +2875,8 @@ body.search-is-visible {
 
 @media screen and (max-width:500px) {
   .header__nav-wrap {
+    z-index: 199;
+    transform: translateZ(130px);
     padding: 152px 44px 64px;
   }
 
