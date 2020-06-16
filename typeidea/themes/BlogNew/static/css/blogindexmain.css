@@ -2697,7 +2697,7 @@ body.search-is-visible {
     width: 100%;
     background: transparent;
     padding: 0;
-    position: fixed;
+    position: static;
     top: 0;
     bottom: auto;
   }
@@ -2742,6 +2742,7 @@ body.search-is-visible {
     padding: 164px 60px 300px;
     overflow-y: auto;
     text-decoration: none;
+    position: fixed;
   }
 
   .nav-wrap-is-visible .header__top {
