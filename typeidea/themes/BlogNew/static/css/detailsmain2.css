@@ -2750,8 +2750,7 @@ body.search-is-visible {
     margin: 0;
     padding: 164px 60px 64px;
     overflow-y: auto;
-    position: inherit;
-    position: static;
+    
   }
 
   .nav-wrap-is-visible .header__top {
