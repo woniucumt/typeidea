@@ -2736,12 +2736,12 @@ body.search-is-visible {
   }
 
   .header__nav-wrap {
-    z-index: 99;
+    z-index: 199;
     transform: translateZ(120px);
     background: #2d00ff;
     opacity: 0;
     visibility: hidden;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
