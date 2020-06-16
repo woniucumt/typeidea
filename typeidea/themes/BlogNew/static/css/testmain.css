@@ -2738,7 +2738,6 @@ body.search-is-visible {
     background: #151515;
     opacity: 0;
     visibility: hidden;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
