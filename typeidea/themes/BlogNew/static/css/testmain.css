@@ -2751,8 +2751,8 @@ body.search-is-visible {
     justify-content: flex-start;
     margin: 0;
     padding: 164px 60px 64px;
-    overflow-y: auto;
-    overflow:hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
   }
 
   .nav-wrap-is-visible .header__top {
