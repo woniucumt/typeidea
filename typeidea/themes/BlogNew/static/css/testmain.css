@@ -2151,6 +2151,7 @@ input::-moz-focus-inner {
 
 .s-header {
   z-index: 100;
+  transform: translateZ(100px);
   overflow:hidden;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -2411,6 +2412,7 @@ input::-moz-focus-inner {
 
 .header__social a::after {
   z-index: 1;
+  transform: translateZ(100px);
   content: "";
   display: block;
   height: 1.4rem;
@@ -2477,6 +2479,7 @@ input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 .header__search-trigger {
   z-index: 1;
+  transform: translateZ(100px);
   display: block;
   color: #000000;
   height: 16px;
@@ -2525,6 +2528,7 @@ input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 .header__search {
   z-index: 400;
+  transform: translateZ(100px);
   overflow:hidden;
   display: block;
   text-align: center;
@@ -2712,6 +2716,8 @@ body.search-is-visible {
 
   .header__top {
     z-index: 199;
+    transform: translateZ(100px);
+    transform: translateZ(100px);
     overflow:hidden;
     background: #22aaff;
     width: 100%;
@@ -2737,6 +2743,7 @@ body.search-is-visible {
 
   .header__nav-wrap {
     z-index: 199;
+    transform: translateZ(100px);
     overflow:hidden;
     background: #151515;
     opacity: 0;
@@ -2789,6 +2796,7 @@ body.search-is-visible {
 
   .header__menu-toggle {
     z-index: 101;
+    transform: translateZ(100px);
     overflow:hidden;
     display: block;
   }
@@ -2960,6 +2968,7 @@ body.search-is-visible {
  * ------------------------------------------------------------------- */
 .go-top {
   z-index: 1;
+  transform: translateZ(100px);
   overflow:hidden;
   opacity: 0;
   visibility: hidden;
