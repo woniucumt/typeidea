@@ -2726,9 +2726,6 @@ body.search-is-visible {
     position: absolute;
     top: 50%;
     left: 4rem;
-       position: inherit;
-    position: static;
-
   }
 
   .header__logo img {
@@ -2737,7 +2734,7 @@ body.search-is-visible {
   }
 
   .header__nav-wrap {
-    z-index: 99;
+    z-index: 919;
     background: #151515;
     opacity: 0;
     visibility: hidden;
@@ -2752,7 +2749,7 @@ body.search-is-visible {
     margin: 0;
     padding: 164px 60px 64px;
     overflow-y: auto;
-
+    position: relative;
   }
 
   .nav-wrap-is-visible .header__top {
