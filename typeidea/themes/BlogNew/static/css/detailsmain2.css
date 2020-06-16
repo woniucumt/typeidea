@@ -2996,7 +2996,18 @@ body.search-is-visible {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
+/* -------------------------------------------------------------------
+ * ## go to top for safari
+ * ------------------------------------------------------------------- */
+.go-top-safari {
+  z-index: 1;
+  position: fixed;
+}
 
+.go-top-safari a,
+.go-top-safari a:visited {
+
+}
 /* ------------------------------------------------------------------- 
  * responsive:
  * site content & footer
