@@ -2713,7 +2713,8 @@ body.search-is-visible {
     background: #22aaff;
     width: 100%;
     height: 78px;
-    position: fixed;
+
+    position: relative;
     top: 0;
     left: 0;
   }
