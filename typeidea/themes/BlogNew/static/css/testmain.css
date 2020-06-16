@@ -1692,7 +1692,6 @@ input::-moz-focus-inner {
   height: 100%;
   transition: all 0.3s;
   z-index: 1;
-  transform: translateZ(120px);
 }
 
 .masonry .entry__thumb-link::after {
@@ -1700,7 +1699,6 @@ input::-moz-focus-inner {
   font-family: georgia, serif;
   font-size: 2.4rem;
   z-index: 1;
-  transform: translateZ(120px);
   display: block;
   height: 88px;
   width: 88px;
@@ -2153,7 +2151,6 @@ input::-moz-focus-inner {
 
 .s-header {
   z-index: 100;
-  transform: translateZ(120px);
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -2413,7 +2410,6 @@ input::-moz-focus-inner {
 
 .header__social a::after {
   z-index: 1;
-  transform: translateZ(120px);
   content: "";
   display: block;
   height: 1.4rem;
@@ -2480,7 +2476,6 @@ input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 .header__search-trigger {
   z-index: 1;
-  transform: translateZ(120px);
   display: block;
   color: #000000;
   height: 16px;
@@ -2742,7 +2737,6 @@ body.search-is-visible {
 
   .header__nav-wrap {
     z-index: 99;
-    transform: translateZ(120px);
     background: #151515;
     opacity: 0;
     visibility: hidden;
@@ -2799,7 +2793,6 @@ body.search-is-visible {
 
   .header__menu-toggle {
     z-index: 101;
-    transform: translateZ(120px);
     display: block;
   }
 
