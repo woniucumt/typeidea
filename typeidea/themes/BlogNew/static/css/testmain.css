@@ -2738,7 +2738,7 @@ body.search-is-visible {
     background: #151515;
     opacity: 0;
     visibility: hidden;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -2748,9 +2748,8 @@ body.search-is-visible {
     justify-content: flex-start;
     margin: 0;
     padding: 164px 60px 64px;
-    overflow-y: auto;
-          position: inherit;
-    position: static;
+    overflow-y: hidden;
+    overflow-x: hidden;
   }
 
   .nav-wrap-is-visible .header__top {
