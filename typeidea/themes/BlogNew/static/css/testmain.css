@@ -2973,16 +2973,7 @@ body.search-is-visible {
   visibility: visible;
 }
 
-.go-top-safari {
-  z-index: 1;
-  opacity: 0;
-  visibility: visible;
-  -webkit-transform: translate3d(0, 200%, 0);
-  transform: translate3d(0, 200%, 0);
-  transition: all 0.8s;
-  position: fixed;
 
-}
 
 /* ------------------------------------------------------------------- 
  * responsive:
