@@ -275,12 +275,12 @@
             goTopButton = $(".go-top2")
         // alert("why");
         // goTopButton.addClass('link-is-visible')
-        if(document.body.clientWidth< 1000)
-        {
-            alert(document.body.clientWidth);
-            if(goTopButton.hasClass('link-is-visible')) goTopButton.removeClass('link-is-visible')
-            if(goTopButton.hasClass('dependheight')) goTopButton.removeClass('dependheight')
-        }
+        // if(document.body.clientWidth< 1000)
+        // {
+        //     alert(document.body.clientWidth);
+        //     if(goTopButton.hasClass('link-is-visible')) goTopButton.removeClass('link-is-visible')
+        //     if(goTopButton.hasClass('dependheight')) goTopButton.removeClass('dependheight')
+        // }
         if (document.body.clientWidth > 1000)
         {
             goTopButton.addClass('dependheight')

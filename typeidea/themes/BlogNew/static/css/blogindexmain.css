@@ -2995,9 +2995,8 @@ body.search-is-visible {
   -webkit-transform: translate3d(0, 200%, 0);
   transform: translate3d(0, 200%, 0);
   transition: all 0.8s;
-  position: fixed;
+  /*position: fixed;*/
   /*bottom: 4rem;*/
-  right: 2rem;
 }
 .go-top2 a,
 .go-top2 a:visited {
