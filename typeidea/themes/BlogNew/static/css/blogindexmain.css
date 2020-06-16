@@ -3018,6 +3018,13 @@ display: -webkit-box;
 /*-webkit-line-clamp: 2;*/
 /*-webkit-box-orient: vertical;*/
 }
+/* -------------------------------------------------------------------
+ * ## go to top for safari
+ * ------------------------------------------------------------------- */
+.go-top-safari {
+  z-index: 1;
+  position: fixed;
+}
 /* ------------------------------------------------------------------- 
  * responsive:
  * site content & footer
