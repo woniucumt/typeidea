@@ -2716,6 +2716,8 @@ body.search-is-visible {
     position: fixed;
     top: 0;
     left: 0;
+    position: inherit;
+    position: static;
   }
 
   .header__logo {
@@ -2748,6 +2750,8 @@ body.search-is-visible {
     margin: 0;
     padding: 164px 60px 64px;
     overflow-y: auto;
+    position: inherit;
+    position: static;
   }
 
   .nav-wrap-is-visible .header__top {
