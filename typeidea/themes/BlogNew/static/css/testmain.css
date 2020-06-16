@@ -2961,25 +2961,16 @@ body.search-is-visible {
  * ------------------------------------------------------------------- */
 .go-top {
   z-index: 1;
-
-  visibility: hidden;
-
   position: fixed;
-
 }
 
 .go-top a,
 .go-top a:visited {
 
-  display: block;
-
-
-
 }
 
 .go-top.link-is-visible {
   visibility: visible;
-
 }
 
 .go-top-safari {
