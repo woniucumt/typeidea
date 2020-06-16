@@ -2756,28 +2756,40 @@ body.search-is-visible {
   }
 
   .nav-wrap-is-visible .header__top {
+    z-index: 199;
+    transform: translateZ(130px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.04);
   }
 
   .nav-wrap-is-visible .header__nav-wrap {
+    z-index: 199;
+    transform: translateZ(130px);
     opacity: 1;
     visibility: visible;
   }
 
   .nav-wrap-is-visible .header__search-trigger {
+    z-index: 199;
+    transform: translateZ(130px);
     display: none;
   }
 
   .header__nav {
+    z-index: 199;
+    transform: translateZ(130px);
     font-size: 20px;
     border-top: 1px dotted rgba(255, 255, 255, 0.04);
   }
 
   .header__nav > li {
+    z-index: 199;
+    transform: translateZ(130px);
     border-bottom: 1px dotted rgba(255, 255, 255, 0.04);
   }
 
   .header__nav > li > a {
+    z-index: 199;
+    transform: translateZ(130px);
     line-height: 7.2rem;
   }
 
