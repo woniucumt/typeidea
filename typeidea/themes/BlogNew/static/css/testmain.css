@@ -2151,6 +2151,7 @@ input::-moz-focus-inner {
 
 .s-header {
   z-index: 100;
+  overflow:hidden;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -2524,6 +2525,7 @@ input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 .header__search {
   z-index: 400;
+  overflow:hidden;
   display: block;
   text-align: center;
   background-color: #ffffff;
@@ -2735,6 +2737,7 @@ body.search-is-visible {
 
   .header__nav-wrap {
     z-index: 199;
+    overflow:hidden;
     background: #151515;
     opacity: 0;
     visibility: hidden;
@@ -2786,6 +2789,7 @@ body.search-is-visible {
 
   .header__menu-toggle {
     z-index: 101;
+    overflow:hidden;
     display: block;
   }
 
@@ -2956,6 +2960,7 @@ body.search-is-visible {
  * ------------------------------------------------------------------- */
 .go-top {
   z-index: 1;
+  overflow:hidden;
   opacity: 0;
   visibility: hidden;
   -webkit-transform: translate3d(0, 200%, 0);
