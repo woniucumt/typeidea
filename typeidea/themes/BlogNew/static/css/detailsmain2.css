@@ -3000,7 +3000,8 @@ body.search-is-visible {
  * ## go to top for safari
  * ------------------------------------------------------------------- */
 .go-top-safari {
-
+  z-index: 1;
+  position: fixed;
 }
 
 
