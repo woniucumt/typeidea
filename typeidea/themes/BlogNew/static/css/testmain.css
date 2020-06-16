@@ -2752,6 +2752,7 @@ body.search-is-visible {
     color: white;
     z-index: 1000;
     position: fixed;
+    transform: translateZ(130px);
   }
 
   .nav-wrap-is-visible .header__top {
