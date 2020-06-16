@@ -2736,9 +2736,8 @@ body.search-is-visible {
   }
 
   .header__nav-wrap {
-    z-index: 199;
+    z-index: 99;
     transform: translateZ(120px);
-    overflow:hidden;
     background: #2d00ff;
     opacity: 0;
     visibility: hidden;
@@ -2753,6 +2752,7 @@ body.search-is-visible {
     margin: 0;
     padding: 164px 60px 64px;
     overflow-y: auto;
+    overflow:hidden;
   }
 
   .nav-wrap-is-visible .header__top {
