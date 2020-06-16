@@ -2748,7 +2748,6 @@ body.search-is-visible {
     margin: 0;
     padding: 164px 60px 64px;
     overflow-y: auto;
-    display: block;
   }
 
   .nav-wrap-is-visible .header__top {
