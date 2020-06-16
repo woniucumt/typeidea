@@ -2736,9 +2736,9 @@ body.search-is-visible {
   }
 
   .header__nav-wrap {
-    z-index: 101;
+    z-index: 100;
     transform: translateZ(130px);
-    background: #151515;
+    background: #2d00ff;
     opacity: 0;
     visibility: hidden;
     position: fixed;
