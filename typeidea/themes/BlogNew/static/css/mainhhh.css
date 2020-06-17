@@ -221,7 +221,7 @@ a:hover
          -o-transition: opacity 1s ease;
             transition: opacity 1s ease;
 
-    background: url(../images/aboutmebackground2.jpeg);
+    background: url(../images/aboutmebackground.jpeg);
     /*background: url(../images/aboutsitebg.jpg);*/
     background-repeat: no-repeat;
     background-size: cover;
