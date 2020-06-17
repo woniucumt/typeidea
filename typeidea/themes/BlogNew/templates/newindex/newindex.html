@@ -41,7 +41,8 @@
 			<!-- Sidebar -->
 			<div id="tmSideBar" class="col-xl-3 col-lg-4 col-md-12 col-sm-12 sidebar">
 
-				<button id="tmMainNavToggle" class="menu-icon">&#9776;</button>
+{#				<button id="tmMainNavToggle" class="menu-icon" style="right:0px;visibility: hidden">&#9776;</button>#}
+				<button id="tmMainNavToggle2" class="menu-icon" >&#9776;</button>
 
 				<div class="inner"style="width: 100%">
 					<nav id="tmMainNav" class="tm-main-nav">
@@ -82,7 +83,7 @@
 					<!-- section 1 -->
 					<section id="tm-section-1" class="tm-section" >
 						<div class="ml-auto">
-							<header class="mb-4"><h1 style="font-size: 3rem;font-weight: 700;padding-bottom: 20px">故九万里，而后乃今培风</h1></header>
+							<header class="mb-4"><h1 class="h1_font_style">故九万里，而后培风</h1></header>
 							<p class="mb-5 tm-font-big" style="font-weight: 300">一直在成长，一直在路上。<br/>
                                                                     不断尝试，不断探索。<br/>
                                                                     记录每一次热情与执着。</p>
@@ -95,7 +96,7 @@
 					<!-- section 2 -->
 					<section id="tm-section-2" class="tm-section tm-section-carousel">
 						<div class="ml-auto">
-							<header class="mb-4"><h1 style="font-size: 3rem;font-weight: 700;padding-bottom: 20px">我劝天公重抖擞</h1></header>
+							<header class="mb-4"><h1 class="h1_font_style">我劝天公重抖擞</h1></header>
                             <p class="mb-5 tm-font-big" style="font-weight: 300">进击的PHD。<br/>
                                                                         一个研究记录站。
                                                                         研究生阶段，从事K12编程教育、计算思维、代码可读性等的研究。<br/>
@@ -110,7 +111,7 @@
 					<!-- section 3 -->
 					<section id="tm-section-3" class="tm-section">						
 						<div class="ml-auto">
-							<header class="mb-4"><h1 style="font-size: 3rem;font-weight: 700;padding-bottom: 20px">行者无疆</h1></header>
+							<header class="mb-4"><h1 class="h1_font_style">行者无疆</h1></header>
 							<p class="mb-5 tm-font-big" style="font-weight: 300">进击的程序员。<br/>
                                                                         一个使用Django搭建的个人博客。<br/>
                                                                         记录每次解惑时刻，记录每一种技术的获得。<br/>
@@ -123,7 +124,7 @@
 					<!-- section 4 -->
 					<section id="tm-section-4" class="tm-section">
 						<div class="ml-auto">
-							<header class="mb-4"><h1 style="font-size: 3rem;font-weight: 700;padding-bottom: 20px">人衣披蜃气 马迹印盐花</h1></header>
+							<header class="mb-4"><h1 class="h1_font_style">人衣披蜃气 马迹印盐花</h1></header>
 							<p class="mb-5 tm-font-big" style="font-weight: 300">进击的摄影师。<br/>
                                                                             一个个人作品搭建的画廊。<br/>
                                                                             当你凝视世界的时候，当你仰望星空的时候。<br/>
@@ -218,7 +219,8 @@
 
 		    	// Hide the nav on mobile
 		    	$("#tmSideBar").removeClass("show");
-		    });	    
+		    	$("#tmMainNavToggle2").removeClass("show");
+		    });
   		}
 
   		function changePage(currentNavItem) {
@@ -241,6 +243,12 @@
   		function setupNavToggle() {
 
 			$("#tmMainNavToggle").on("click", function(){
+				$(".sidebar").toggleClass("show");
+			});
+  		}
+  		function setupNavToggleClose() {
+
+			$("#tmMainNavToggle2").on("click", function(){
 				$(".sidebar").toggleClass("show");
 			});
   		}
@@ -307,6 +315,7 @@
 			    setupNav();
 			    setupNavToggle();
 			    setupFooter();
+			    setupNavToggleClose();
 
 			    // Resize Carousel upon window resize
 			    $(window).resize(function() {

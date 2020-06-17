@@ -88,7 +88,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 #tmMainNavToggle { display: none; }
-
+#tmMainNavToggle2 { display: none; }
 .sidebar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -277,6 +277,10 @@ address { font-size: 1rem; }
     padding: 0px 0px;
     background-color: rgba(0,0,0,0.3);
 }
+.h1_font_style{
+        font-size: 2rem;
+        font-weight: 600;
+    }
 
 footer a { color: white; }
 
@@ -291,6 +295,10 @@ footer a { color: white; }
     /*margin: 20px 0 35px 0;*/
     /*padding-right: 10px;*/
   }
+  .h1_font_style{
+        font-size: 3rem;
+        font-weight: 700;
+    }
 
   .tm-content { padding: 50px 5%; }
 }
@@ -311,6 +319,10 @@ footer a { color: white; }
     padding: 50px;
     margin: 0 auto;
   }
+  .h1_font_style{
+        font-size: 3rem;
+        font-weight: 700;
+    }
 }
 
 @media (max-width: 1199px) {
@@ -320,6 +332,10 @@ footer a { color: white; }
       max-width: 100%;
       margin-bottom: 30px;
   }
+    .h1_font_style{
+        font-size: 3rem;
+        font-weight: 700;
+    }
 }
 
 @media (max-width: 991px) {    
@@ -334,18 +350,25 @@ footer a { color: white; }
         display: block;
         position: absolute;
         right: -60px;
-        top: 0;
+        top: 20px;
+    }
+    #tmMainNavToggle2 {
+        display: block;
+        position: fixed;
+        left:20px;
+        top: 20px;
+        z-index: 10;
     }
     
     .menu-icon {
         padding: 10px 15px;
         background: #000000c4;
-        border: 1px solid;
-        color: #33ccff;
+        border: 0px solid;
+        border-radius: 15px 15px 15px 15px;
+        color: #ffffff;
         cursor: pointer;
         margin-top: 4px;
         margin-left: 4px;
-        border-radius: 5px;
         width: 60px;
         height: 50px;
         z-index: 1001;
@@ -382,6 +405,19 @@ footer a { color: white; }
       max-width: 620px;
       width: 100%;
     }
+    .tm-btn {
+    padding: 5px 20px;
+    font-size: 1.2rem;
+    font-weight: 200;
+    background: transparent;
+    border-color: white;
+    color: white;
+    cursor: pointer;
+}
+    .h1_font_style{
+        font-size: 2rem;
+        font-weight: 600;
+    }
 }
 
 @media (max-width: 767px) {
@@ -410,6 +446,33 @@ footer a { color: white; }
     margin-right: 0;
     margin-bottom: 1.5rem;
   }
+      #tmMainNavToggle {
+        display: block;
+        position: absolute;
+        right: -60px;
+        top: 0;
+    }
+      #tmMainNavToggle2 {
+        display: block;
+        position: fixed;
+        left:20px;
+        top: 0;
+        z-index: 50;
+    }
+
+    .menu-icon {
+        padding: 10px 15px;
+        background: #000000c4;
+        border: 0px solid;
+        border-radius: 0px 15px 15px 0px;
+        color: #ffffff;
+        cursor: pointer;
+        margin-top: 4px;
+        margin-left: 4px;
+        width: 60px;
+        height: 50px;
+        z-index: 1001;
+    }
 }
 
 /* Loader */
