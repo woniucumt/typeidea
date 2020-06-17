@@ -114,7 +114,7 @@
                         <article class="masonry__brick entry format-standard animate-this">
 
                                 <div class="entry__thumb" style="height: 350px;">
-                                    <a href="single-standard.html" class="entry__thumb-link">
+                                    <a class="entry__thumb-link">
                                         <img src="../../static/images/woodcraft-1200.jpg">
                                     </a>
                                 </div>
@@ -127,7 +127,7 @@
                             <div class="entry__header">
                                 {% if category.name  %}
                                     <h4 style="display: inline">当前分类：{{ category.name }} &nbsp;（共{{ post_list.count }}篇）</h4>
-                                    <a href="{% url 'postlist' %}"><h4 style="display: inline;padding-left: 10px" >全部</h4></a>
+                                    <a href="{% url 'postlist' %}"><h4 style="display: inline;padding:5px 10px 5px 10px;margin-left:10px;background-color: #dcdcdc;border-radius: 5px;" >全部</h4></a>
                                 {% else %}
                                     <h4 style="display: inline">当前分类：全部</h4>
                                 {% endif %}
@@ -153,7 +153,7 @@
                     </article> <!-- end article -->
 
 
-                                        {% for post in post_list %}
+                    {% for post in post_list %}
                         {% if category.name %}
                         {% if post.is_topped %}
                         <article class="masonry__brick entry  animate-this" >
@@ -180,13 +180,12 @@
 
                                 <hr style="margin-top: 10px;margin-bottom: 10px"/>
                                 <span  style="vertical-align: middle">
-
                                     <img src="../../static/images/icons/read.svg" style="height: 18px;width: 18px;">
-                                    <a>阅读 (<a class="random"></a>)</a>
+                                    <a style="color: #535354">阅读 (<a class="random" style="color: #535354"></a>)</a>
                                     <img src="../../static/images/icons/dianzan.svg" style="height: 18px;width: 18px;">
-                                    <a>点赞 (<a class="random"></a>)</a>
+                                    <a style="color: #535354">点赞 (<a class="random" style="color: #535354"></a>)</a>
                                     <img src="../../static/images/icons/share.svg" style="height: 18px;width: 18px;">
-                                    <a>分享 (<a class="random"></a>)</a>
+                                    <a style="color: #535354">分享 (<a class="random" style="color: #535354"></a>)</a>
                                 </span>
                         </div>
 
@@ -231,13 +230,12 @@
                             </div>
                             <hr style="margin-top: 10px;margin-bottom: 10px"/>
                                 <span  style="vertical-align: middle">
-
                                     <img src="../../static/images/icons/read.svg" style="height: 18px;width: 18px;">
-                                    <a>阅读 (<a class="random"></a>)</a>
+                                    <a style="color: #535354">阅读 (<a class="random" style="color: #535354"></a>)</a>
                                     <img src="../../static/images/icons/dianzan.svg" style="height: 18px;width: 18px;">
-                                    <a>点赞 (<a class="random"></a>)</a>
+                                    <a style="color: #535354">点赞 (<a class="random" style="color: #535354"></a>)</a>
                                     <img src="../../static/images/icons/share.svg" style="height: 18px;width: 18px;">
-                                    <a>分享 (<a class="random"></a>)</a>
+                                    <a style="color: #535354">分享 (<a class="random" style="color: #535354"></a>)</a>
                                 </span>
                         </div>
                     </article>
