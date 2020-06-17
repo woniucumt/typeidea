@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Typerite</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=0.6">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../../static/css/blogindexbase.css">
+    <link rel="stylesheet" href="../../static/css/blogindexvendor.css">
+    <link rel="stylesheet" href="../../static/css/blogindexmain.css">
+    <link href="../../static/css/blogindexstyle.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../static/css/blogindexboostrap.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- script
+    ================================================== -->
+    <script src="../../static/js/modernizr.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+
+</head>
+
+<body>
+
+    <!-- preloader
+    ================================================== -->
+{#    <div id="preloader">#}
+{#        <div id="loader" class="dots-fade">#}
+{#            <div></div>#}
+{#            <div></div>#}
+{#            <div></div>#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="agileits_main" style="height: 10rem;">#}
+{#    <!-- header -->#}
+{#	<div class="container">#}
+{#		<div class="w3_agile_logo">#}
+{#			<h1 style="padding-top: 4rem"><a href="{% url 'blog-view' %}" ></a></h1>#}
+{#		</div>#}
+{#	</div>#}
+{#	</div>#}
+
+    <div id="top" class="s-wrap site-wrapper" style="background-color: #f6f7f8;overflow: hidden">
+
+        <!-- site header
+        ================================================== -->
+        <header class="s-header header"style="overflow: hidden" >
+
+            <div class="header__top " style="overflow: hidden">
+                <div class="header__logo">
+                    <a class="site-logo" href="index.html">
+                        <p style="font-size: 4rem;color: #ffffff;" ><a href="{% url 'newIndex' %}" style="color:#f0ad4e">无疆</a></p>
+                    </a>
+                </div>
+                <div class="header__search">
+
+                    <form role="search" method="get" class="header__search-form" action="#">
+                        <label>
+                            <span class="hide-content">Search for:</span>
+                            <input type="search" class="header__search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">
+                        </label>
+                        <input type="submit" class="header__search-submit" value="Search">
+                    </form>
+
+                    <a href="#0" title="Close Search" class="header__search-close">Close</a>
+
+                </div>  <!-- end header__search -->
+
+                <!-- toggles -->
+                <a href="#0" class="header__search-trigger"></a>
+                <a href="#0" class="header__menu-toggle"><span>Menu</span></a>
+
+            </div> <!-- end header__top -->
+
+            <nav class="header__nav-wrap">
+
+                <ul class="header__nav">
+{#                    <li id="closemenu">关闭菜单</li>#}
+                    <li class="current" style="color: #ffffff">当前位置：博客详情</li>
+                    <li class="current" style="color: #ffffff"><hr/></li>
+                    <li class="current"><a href={% url 'newIndex' %} style="color:#f0ad4e" >主站点</a></li>
+                    <li class="current"><a href={% url 'postlist' %} style="color:#f0ad4e" >博客列表</a></li>
+                    {% for cate in navs %}
+                        <li><a href="/category/{{ cate.id }}" title="">{{ cate.name }} ({{ cate.post_count }})</a></li>
+                    {% endfor %}
+
+                </ul>
+
+            </nav> <!-- end header__nav-wrap -->
+
+        </header> <!-- end s-header -->
+
+        <div class="s-content" style="padding-top: 3.4rem">
+
+            <div class="masonry-wrap">
+
+                <div class="masonry">
+
+                    <div class="grid-sizer"></div>
+                        <article class="masonry__brick entry format-standard animate-this">
+
+                                <div class="entry__thumb" style="height: 350px;">
+                                    <a href="single-standard.html" class="entry__thumb-link">
+                                        <img src="../../static/images/woodcraft-1200.jpg">
+                                    </a>
+                                </div>
+
+
+                            </article> <!-- end article -->
+
+                    <article class="masonry__brick entry  animate-this"style="margin: 0 auto;" >
+                        <div class="entry__text" style="background-color: rgba(255,255,255,0)" >
+                            <div class="entry__header">
+                                {% if category.name  %}
+                                    <h4 style="display: inline">当前分类：{{ category.name }} &nbsp;（共{{ post_list.count }}篇）</h4>
+                                    <a href="{% url 'postlist' %}"><h4 style="display: inline;padding-left: 10px" >全部</h4></a>
+                                {% else %}
+                                    <h4 style="display: inline">当前分类：全部</h4>
+                                {% endif %}
+                            </div>
+                            <hr style="margin-bottom:0px "/>
+                        </div>
+                    </article> <!-- end article -->
+                    <article class="masonry__brick entry  animate-this" style="align-content: center;margin: 0 auto" >
+                        <div class="entry__text" style="background-color: rgba(255,255,255,0)" >
+                            <div class="entry__header">
+                                    <button class="buttonTag" style="background-color: #83c1c8">标签</button>
+                                    <button class="buttonTag" style="background-color: #7dbd85">功能</button>
+                                    <button class="buttonTag" style="background-color: #ecc35e">正在</button>
+                                    <button class="buttonTag" style="background-color: #625dc8">开发</button>
+                                    <button class="buttonTag" style="background-color: #e4977a">敬请</button>
+                                    <button class="buttonTag" style="background-color: #efb7c2">期待</button>
+
+                            </div>
+{#                            为了让标签页看起来居中#}
+
+                            <hr style="margin-top: 30px"/>
+                        </div>
+                    </article> <!-- end article -->
+
+
+                                        {% for post in post_list %}
+                        {% if category.name %}
+                        {% if post.is_topped %}
+                        <article class="masonry__brick entry  animate-this" >
+                            <div class="entry__text" >
+                            <div class="entry__header">
+                                <h2 class="entry__title" ><a href="{% url 'post-detail'  post.id  %}">{{ post.title }}</a>
+                                <a style="color: #ff0000;font-size: 12px;border: 1px solid #ff0000;border-radius: 10px;">&nbsp;&nbsp;顶置&nbsp;&nbsp;</a></h2>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-cat">
+                                        <a >分类 : 顶置 / {{ post.category }}</a>
+{#                                        <a >标签:{{ post.tag }}</a>#}
+                                    </span>
+                                    <span class="entry__meta-date">发表时间：
+                                        <a >{{ post.created_time }}</a>
+                                    </span>
+                                </div>
+                            </div>
+                                <div class="entry__excerpt">
+                                <p class="wordcut" style="min-height: 60px;" >
+                                    {{ post.desc }}
+
+                                </p>
+                            </div>
+
+                                <hr style="margin-top: 10px;margin-bottom: 10px"/>
+                                <span  style="vertical-align: middle">
+
+                                    <img src="../../static/images/icons/read.svg" style="height: 18px;width: 18px;">
+                                    <a>阅读 (<a class="random"></a>)</a>
+                                    <img src="../../static/images/icons/dianzan.svg" style="height: 18px;width: 18px;">
+                                    <a>点赞 (<a class="random"></a>)</a>
+                                    <img src="../../static/images/icons/share.svg" style="height: 18px;width: 18px;">
+                                    <a>分享 (<a class="random"></a>)</a>
+                                </span>
+                        </div>
+
+                    </article>
+                        {% endif %}
+                        {% endif %}
+                    {% endfor %}
+
+
+                    {% for post in post_list %}
+                        {% if not post.is_topped %}
+                        <article class="masonry__brick entry  animate-this">
+
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h2 class="entry__title"><a href="{% url 'post-detail'  post.id  %}">{{ post.title }}</a>
+                                {% if post.is_orignal == "原创" %}
+                                <a style="color: #22aaff;font-size: 12px;border: 1px solid #22aaff;border-radius: 10px;">&nbsp;&nbsp;原创&nbsp;&nbsp;</a>
+                                {% endif  %}
+                                {% if post.is_orignal == "加工" %}
+                                <a style="color: #2d00ff;font-size: 12px;border: 1px solid #2d00ff;border-radius: 10px;">&nbsp;&nbsp;加工&nbsp;&nbsp;</a>
+                                {% endif  %}
+                                {% if post.is_orignal == "转载" %}
+                                <a style="color: #ff7d1f;font-size: 12px;border: 1px solid #ff7d1f;border-radius: 10px;">&nbsp;&nbsp;转载&nbsp;&nbsp;</a>
+                                {% endif  %}
+                                </h2>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-cat">
+                                        <a >分类 : {{ post.category }} </a>
+{#                                        <a >标签:{{ post.tag }}</a>#}
+                                    </span>
+                                    <span class="entry__meta-date">发表时间：
+                                        <a >{{ post.created_time }}</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p class="wordcut" style="min-height: 60px;" >
+                                    {{ post.desc }}
+
+                                </p>
+                            </div>
+                            <hr style="margin-top: 10px;margin-bottom: 10px"/>
+                                <span  style="vertical-align: middle">
+
+                                    <img src="../../static/images/icons/read.svg" style="height: 18px;width: 18px;">
+                                    <a>阅读 (<a class="random"></a>)</a>
+                                    <img src="../../static/images/icons/dianzan.svg" style="height: 18px;width: 18px;">
+                                    <a>点赞 (<a class="random"></a>)</a>
+                                    <img src="../../static/images/icons/share.svg" style="height: 18px;width: 18px;">
+                                    <a>分享 (<a class="random"></a>)</a>
+                                </span>
+                        </div>
+                    </article>
+                    {% endif %}
+                    {% endfor %}
+
+                    {% if post_list.count < 4 %}
+
+                        <article class="masonry__brick entry  animate-this">
+
+                        <div class="entry__text">
+                            <div class="entry__header">
+                                <h2 class="entry__title"><a >在学了在学了别催鸭！</a></h2>
+                                <div class="entry__meta">
+                                    <span class="entry__meta-cat">
+                                        <a >分类 : {{ post.category }}</a>
+{#                                        <a >标签:{{ post.tag }}</a>#}
+                                    </span>
+                                    <span class="entry__meta-date">发表时间：
+                                        <a >系统上线那一天</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p class="wordcut" style="min-height: 60px;" >
+                                    博主在学了！原谅博主又得找工作又得学各种东西……写博不易，且催且珍惜！
+                                    毕竟系统才刚上线鸭！系统整体升级，之前的文章不要了！不要了！
+
+                                </p>
+                            </div>
+                            <hr style="margin-top: 10px;margin-bottom: 10px"/>
+                                <span  style="vertical-align: middle">
+
+                                    <img src="../../static/images/icons/read.svg" style="height: 18px;width: 18px;">
+                                    <a>催(<a class="random"> </a>)</a>
+                                    <img src="../../static/images/icons/dianzan.svg" style="height: 18px;width: 18px;">
+                                    <a>催催(<a class="random"> </a>)</a>
+                                    <img src="../../static/images/icons/share.svg" style="height: 18px;width: 18px;">
+                                    <a>催催催(<a class="random"> </a>)</a>
+                                </span>
+                        </div>
+                    </article>
+
+                    {% endif %}
+                    <article class="masonry__brick entry format-link animate-this">
+                        <div class="entry__thumb">
+                            <div class="link-wrap">
+                                <h2>行者无疆</h2>
+                                <cite>
+                                    <a target="_blank" href="http://woniu.press">http://woniu.press</a>
+                                </cite>
+                            </div>
+                        </div>
+
+                    </article> <!-- end article -->
+
+
+                </div> <!-- end masonry -->
+
+            </div> <!-- end masonry-wrap -->
+
+            <div class="row">
+                <div class="column large-full">
+                    <nav class="pgn" style="font-size: 20px">
+                    <ul>
+                            {% if page_obj %}
+                            {% if page_obj.has_previous %}
+                                <li><a class="pgn__prev" href="?page={{ page_obj.previous_page_number }}">Prev</a></li>
+                            {% else %}
+                                <li><a class = "pgn__num your_hair" >你的头发</a></li>
+                            {% endif %}
+                                {% for i in  paginator_range %}
+                                    {% if i == page_obj.number %}
+                                        <li><a class="pgn__num current" href="?page={{ i }}">{{ i }}</a></li>
+                                    {% else %}
+                                        <li><a class="pgn__num" href="?page={{ i }}">{{ i }}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+                            {% if page_obj.has_next %}
+                                <li><a class="pgn__next" href="?page={{ page_obj.next_page_number }}">Next</a></li>
+                            {% else %}
+                                <li><a  class = "pgn__num your_hair">你的头发</a></li>
+                            {% endif %}
+                            {% endif %}
+                    </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </div> <!-- end s-content -->
+
+
+        <!-- footer
+        ================================================== -->
+        <footer class="s-footer">
+            <div class="row">
+                <div class="column large-full footer__content">
+                    <div class="footer__copyright">
+                        <span>© Copyright Woniu 2020</span>
+                        <span>Designed By Woniu</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top"></a>
+            </div>
+        </footer>
+
+    </div> <!-- end s-wrap -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="../../static/js/jquery-3.2.1.min.js"></script>
+    <script src="../../static/js/plugins.js"></script>
+    <script src="../../static/js/main.js"></script>
+    <script src="../../static/js/main2.js"></script>
+{#    生成随机数#}
+    <script type="text/javascript">
+        var ele=document.getElementsByClassName("random");
+        var count=ele.length
+        for(var i =0;i<count;i++)
+        {
+              ele[i].innerHTML=parseInt(100*Math.random())
+        }
+    </script>
+
+</body>
