@@ -157,7 +157,7 @@ class SearchView(IndexView):
         return queryset.filter(Q(title__icontains=keyword) | Q(desc__icontains=keyword))
 
 class aboumeView(IndexView):
-    template_name = 'aboutME/aboutme.html'
+    template_name = 'aboutME/aboutme2.html'
 
 class abousiteView(IndexView):
     template_name = 'aboutME/aboutsite.html'
