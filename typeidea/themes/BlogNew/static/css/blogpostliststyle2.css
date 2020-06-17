@@ -70,18 +70,7 @@ margin: 1em 0;}
     text-transform: capitalize;
     font-weight: 300;
 }
-.buttonTag {
-    background-color: #00bccc;
-    border:0px;
-    height:50px;
-    width: 120px;
-    border-radius: 5px;
-    margin-right: 1%;
-    width: 15%;
-    -webkit-flex: 1;
-    flex: 1;
-    padding:0 0 0 0 ;
-}
+
 
 @media screen and (max-width: 1080px){
 	
@@ -99,8 +88,6 @@ font-size: 2.8em;}
 
 h3.about_w3l, .services_head_w3_agile h3, .contact_w3_agileits h3, .essentials_main_w3_agile h3, .blog_head_wthree h3 {
 font-size: 2.4em;}
-
-
 
 }
 @media screen and (max-width: 900px){
@@ -125,8 +112,7 @@ font-size: 2.4em;}
 	
 	.banner_text_w3layouts h3 {
     font-size: 2.3em;
-
-    }
+}
 }
 @media screen and (max-width: 736px){
 	
@@ -141,7 +127,6 @@ font-size: 2.4em;}
 	
 	.banner_text_w3layouts {
     padding: 11em 0;}
-
 	
 }
 @media screen and (max-width: 667px){
@@ -152,7 +137,6 @@ font-size: 2.4em;}
 	
 	.banner_text_w3layouts h3{
 	line-height: 1.5;}
-
 	
 }
 @media screen and (max-width: 640px){
@@ -160,7 +144,6 @@ font-size: 2.4em;}
 	
 	.banner_text_w3layouts h3 {
     font-size: 2.15em;}
-
 	
 }
 @media screen and (max-width: 600px){
@@ -172,8 +155,7 @@ font-size: 2.4em;}
 	
 	.banner_text_w3layouts {
       padding: 10em 0 ;}
-
-
+	  
 }
 
 @media screen and (max-width: 480px){
@@ -182,8 +164,7 @@ font-size: 2.4em;}
 	height:85px;}
 	
 	 .banner_text_w3layouts {
-    padding: 4em 0;}
-
+    padding: 4em 0;} 
 	 
 }
 @media screen and (max-width: 414px){
@@ -208,8 +189,7 @@ font-size: 2.4em;}
 	
 	.banner_text_w3layouts p {
      font-size: 1.2em;}
-
-
+	 
 }
 @media screen and (max-width: 375px) {
 	.banner_text_w3layouts {
@@ -225,9 +205,6 @@ font-size: 2.4em;}
 		.w3_agile_logo h1 a {
 			font-size: 0.9em;
 		}
-        .buttonTag{
-        width: 50px;
-    }
 
 	}
 }

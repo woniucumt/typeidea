@@ -1416,6 +1416,11 @@ input::-moz-focus-inner {
   background-color: #000000;
   color: white;
 }
+.pgn .your_hair,
+.pgn .your_hair:hover {
+  background-color: #d3d3d3;
+  color: white;
+}
 
 .pgn .inactive,
 .pgn .inactive:hover {
@@ -2921,7 +2926,7 @@ body.search-is-visible {
  * ------------------------------------------------------------------- */
 .s-footer {
   padding-top: 4rem;
-  padding-bottom: 8rem;
+  padding-bottom: 4rem;
   font-size: 1.6rem;
   line-height: 2.4rem;
   color: rgba(0, 0, 0, 0.5);

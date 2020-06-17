@@ -203,18 +203,28 @@
 
             <div class="row">
                 <div class="column large-full">
-                    <nav class="pgn">
-                        <ul>
-                            <li><a class="pgn__prev" href="#0">Prev</a></li>
-                            <li><a class="pgn__num" href="#0">1</a></li>
-                            <li><span class="pgn__num current">2</span></li>
-                            <li><a class="pgn__num" href="#0">3</a></li>
-                            <li><a class="pgn__num" href="#0">4</a></li>
-                            <li><a class="pgn__num" href="#0">5</a></li>
-                            <li><span class="pgn__num dots">…</span></li>
-                            <li><a class="pgn__num" href="#0">8</a></li>
-                            <li><a class="pgn__next" href="#0">Next</a></li>
-                        </ul>
+                    <nav class="pgn" style="font-size: 20px">
+                    <ul>
+                            {% if page_obj %}
+                            {% if page_obj.has_previous %}
+                                <li><a class="pgn__prev" href="?page={{ page_obj.previous_page_number }}">Prev</a></li>
+                            {% else %}
+                                <li><a class = "pgn__num your_hair" >你的头发</a></li>
+                            {% endif %}
+                                {% for i in  paginator_range %}
+                                    {% if i == page_obj.number %}
+                                        <li><a class="pgn__num current" href="?page={{ i }}">{{ i }}</a></li>
+                                    {% else %}
+                                        <li><a class="pgn__num" href="?page={{ i }}">{{ i }}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+                            {% if page_obj.has_next %}
+                                <li><a class="pgn__next" href="?page={{ page_obj.next_page_number }}">Next</a></li>
+                            {% else %}
+                                <li><a  class = "pgn__num your_hair">你的头发</a></li>
+                            {% endif %}
+                            {% endif %}
+                    </ul>
                     </nav>
                 </div>
             </div>
@@ -229,13 +239,8 @@
                 <div class="column large-full footer__content">
                     <div class="footer__copyright">
                         <span>© Copyright Woniu 2020</span>
-                        <span>Powered By Django</span>
+                        <span>Designed By Woniu</span>
                     </div>
-                    <div class="footer__copyright">
-                        <span>Code Version:v2.0-Beta</span>
-                        <span>Theme Version:v2.0.1-Beta</span>
-                    </div>
-
                 </div>
             </div>
 

@@ -40,6 +40,10 @@ class CommonViewMixin:
         context = super().get_context_data(**kwargs)
         context.update({'sidebars':SideBar.get_all()})
         context.update(Category.get_navs())
+        paginator_range = context["paginator"].page_range
+        context.update({
+            "paginator_range": paginator_range
+        })
         addrString = ''
         # 查询ip的接口
         try:
@@ -78,7 +82,7 @@ class postlistView(CommonViewMixin, ListView):
     queryset = Post.latest_posts()
     paginate_by = 8
     context_object_name = 'post_list'
-    template_name = 'blog/blogpostlist.html'
+    template_name = 'blog/blogpostlist2.html'
 
 class CategoryView(postlistView):
     def get_context_data(self,**kwargs):
@@ -86,7 +90,7 @@ class CategoryView(postlistView):
         category_id = self.kwargs.get('category_id')
         category = get_object_or_404(Category, pk=category_id)
         context.update({
-            'category':category
+            'category':category,
         })
         return context
     def get_queryset(self):
