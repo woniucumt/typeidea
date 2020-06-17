@@ -66,32 +66,11 @@ class CommonViewMixin:
         # print("IP：",self.request.META.get('REMOTE_ADDR'),"日期：",datetime.now())
         return context
 
-# 为了部分页自己做的，这是很不好的方法。
+# 为了部分页自己做的，这是很不好的方法。为了减少函数体，去除记录IP的方法。
 class CommonViewMixinDetails:
     def get_context_data(self,**kwargs):
         context = super().get_context_data(**kwargs)
         context.update({'sidebars':SideBar.get_all()})
-        context.update(Category.get_navs())
-        addrString = ''
-        # 查询ip的接口
-        try:
-            r = requests.get(url='http://whois.pconline.com.cn/ipJson.jsp?ip='+str(self.request.META.get('REMOTE_ADDR'))+'&json=true')
-            print('http://whois.pconline.com.cn/ipJson.jsp?ip='+self.request.META.get('REMOTE_ADDR')+'&json=true')
-            # print(type(json.loads(r.content)))
-            jsonStr = json.loads(str(r.content, encoding="gbk"))
-            # jsonStr = json.loads(str(r.content, encoding="utf-8"))
-            # print(jsonStr["country"]+jsonStr["regionName"]+jsonStr["city"])
-            # addrString = jsonStr["country"]+jsonStr["regionName"]+jsonStr["city"]
-            addrString = jsonStr["addr"]
-        except Exception as e:
-            print(e)
-        try:
-            with open(os.path.dirname(os.path.abspath(__file__))+'visitRecord.txt', 'a') as f:
-                f.write("IP："+self.request.META.get('REMOTE_ADDR')+"日期："+addrString+str(datetime.now())+"\n")
-                f.close()
-        except Exception as e:
-            print(e)
-        # print("IP：",self.request.META.get('REMOTE_ADDR'),"日期：",datetime.now())
         return context
 
 class IndexView(CommonViewMixin, ListView):
