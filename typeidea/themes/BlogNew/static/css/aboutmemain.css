@@ -377,7 +377,7 @@ a:hover
          -o-transition: .2s ease;
             transition: .2s ease;
 
-    background: #008aff;
+    background-color: #008aff;
 }
 
 #intro .container-mid a:hover:after
@@ -595,7 +595,7 @@ a:hover
             transition: .25s ease;
 
     color: #fff;
-    background: #008aff;
+    background: rgba(12,12,12,0.7);
 }
 
 #work .showcase .item:hover .info
