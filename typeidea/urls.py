@@ -22,7 +22,8 @@ from django.views.generic import TemplateView
 #from blog.views import post_detail,post_list
 from blog.views import IndexView, CategoryView,TagView,PostDetailView, SearchView,aboumeView
 from blog.views import acaindexView, testView, galleryView, BlogIndexView, postlistView,abousiteView
-from blog.views import postdetialview,acaCTView,newindexView
+from blog.views import postdetialview,acaCTView,newindexView, index_diagoona,IndexViewBlog,\
+    IndexViewGallery,IndexViewAca,IndexViewHome
 from config.views import LinkListView
 from django.conf import settings
 from django.conf.urls import url, include
@@ -38,7 +39,11 @@ urlpatterns = [
     # url(r'^links/$',links),
     # url(r'^admin/', custom_site.urls),
     # url(r'^super_admin/', admin.site.urls),
-    url(r'^$',IndexView.as_view(),name='newIndex'),  #项目的总index
+    # url(r'^$',IndexView.as_view(),name='newIndex'),  #项目的总index，旧版
+    url(r'^$',IndexViewHome.as_view(),name='IndexHome'),  #项目的总index，新版
+    url(r'^index_blog/',IndexViewBlog.as_view(),name='IndexBlog'),  #项目的总index
+    url(r'^index_gallery/',IndexViewGallery.as_view(),name='IndexGallery'),  #项目的总index
+    url(r'^index_aca/',IndexViewAca.as_view(),name='IndexAca'),  #项目的总index
     url(r'^blogindex/', BlogIndexView.as_view(), name='blog-view'),  # 博客首页
     url(r'^about/', aboumeView.as_view(),name='aboutme'),#关于我
     url(r'^aboutsite/', abousiteView.as_view(),name='aboutsite'),#关于我

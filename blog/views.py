@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 from .models import Tag, Post, Category
 from config.models import SideBar
-from django.views.generic import DetailView, ListView
+from django.views.generic import DetailView, ListView,TemplateView
 from datetime import datetime
 import os
 import requests
@@ -79,6 +79,22 @@ class IndexView(CommonViewMixin, ListView):
     paginate_by = 5
     context_object_name = 'post_list'
     template_name = 'newindex/newindex.html'
+
+#index拆开了，就只好这样写了，前端不给力。
+class IndexViewHome(TemplateView):
+    template_name = 'newindex/index-home.html'
+class IndexViewBlog(TemplateView):
+    template_name = 'newindex/index-blog.html'
+class IndexViewAca(TemplateView):
+    template_name = 'newindex/index-aca.html'
+class IndexViewGallery(TemplateView):
+    template_name = 'newindex/index-gallery.html'
+
+# beta版本的index的路由
+def index_diagoona (request, page_name):
+    page_name = page_name
+    return render(request,'newindex/index-'+page_name+'.html')
+
 
 class BlogIndexView(IndexView):
     queryset = Post.latest_posts()
