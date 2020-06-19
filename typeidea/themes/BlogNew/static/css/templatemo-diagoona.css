@@ -327,7 +327,7 @@ textarea {
         padding-right: 10px;
     }
     .tm-content-title { font-size: 2.0rem; }
-    .content_ordinary { font-size:20px; }
+    .content_ordinary { font-size:18px; }
 }
 
 @media (max-width: 460px) {
@@ -336,7 +336,7 @@ textarea {
     .tm-slogon { font-size: 1.0rem; }
 
     .tm-content-title { font-size: 2.0rem; }
-    .content_ordinary { font-size:20px; }
+    .content_ordinary { font-size:18px; }
 }
 
 @media (max-width: 450px), (min-width: 768px) and (max-width: 830px), (min-width: 992px) and (max-width: 1040px) {
