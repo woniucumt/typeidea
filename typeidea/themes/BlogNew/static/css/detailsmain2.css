@@ -2745,10 +2745,10 @@ body.search-is-visible {
     -webkit-justify-content: flex-start;
     justify-content: flex-start;
     margin: 0;
-    padding: 164px 60px 64px;
+    padding: 164px 60px 300px;
     overflow-y: auto;
     text-decoration: none;
-
+    position: fixed;
   }
 
   .nav-wrap-is-visible .header__top {
