@@ -49,7 +49,7 @@
     <!-- header -->
         <div class="container">
             <div class="w3_agile_logo">
-                <h1><a href="{% url 'newIndex' %}">无疆</a></h1>
+                <h1><a href="{% url 'IndexHome' %}">无疆</a></h1>
             </div>
             <div class="agileits_w3layouts_nav">
             </div>
@@ -85,7 +85,7 @@
             <div class="header__top " style="overflow: hidden">
                 <div class="header__logo">
                     <a class="site-logo" href="index.html">
-                        <p style="font-size: 4rem;color: #ffffff;" ><a href="{% url 'newIndex' %}" style="color:#f0ad4e">无疆</a></p>
+                        <p style="font-size: 4rem;color: #ffffff;" ><a href="{% url 'IndexHome' %}" style="color:#f0ad4e">无疆</a></p>
                     </a>
                 </div>
                 <div class="header__search">
@@ -114,7 +114,7 @@
 {#                    <li id="closemenu">关闭菜单</li>#}
                     <li class="current" style="color: #ffffff">当前位置：博客详情</li>
                     <li class="current" style="color: #ffffff"><hr/></li>
-                    <li class="current"><a href={% url 'newIndex' %} style="color:#f0ad4e" >主站点</a></li>
+                    <li class="current"><a href={% url 'IndexHome' %} style="color:#f0ad4e" >主站点</a></li>
                     <li class="current"><a href={% url 'postlist' %} style="color:#f0ad4e" >博客列表</a></li>
                     {% for cate in navs %}
                         <li><a href="/category/{{ cate.id }}" title="">{{ cate.name }} ({{ cate.post_count }})</a></li>

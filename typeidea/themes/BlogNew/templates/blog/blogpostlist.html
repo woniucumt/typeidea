@@ -91,7 +91,7 @@
                         <li class="current" style="color: #ffffff">当前分类：全部</li>
                     {% endif %}
                     <li class="current" style="color: #ffffff"><hr/></li>
-                    <li class="current"><a href={% url 'newIndex' %} style="color:#f0ad4e" >主站点</a></li>
+                    <li class="current"><a href={% url 'IndexHome' %} style="color:#f0ad4e" >主站点</a></li>
                     <li class="current"><a href={% url 'blog-view' %} style="color:#f0ad4e" >博客主页</a></li>
                     {% for cate in navs %}
                         <li><a href="/category/{{ cate.id }}" title="">{{ cate.name }} ( {{ cate.post_count }} )</a></li>
