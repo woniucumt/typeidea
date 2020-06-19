@@ -115,10 +115,18 @@
 
                                 <div class="entry__thumb" style="height: 350px;">
                                     <a class="entry__thumb-link">
-                                        {% if cate.id  %}
-                                            {% if cate.id == 1 %}
-                                            <img src="../../static/images/pic_django.jpeg">
-                                            {% endif %}
+                                        {% if category.name == "Django是饭碗"%}
+                                            <img src="../../static/images/pic_django.jpg">
+                                        {% elif category.name == "前端的一大堆事"%}
+                                            <img src="../../static/images/pic_frontend.jpg">
+                                        {% elif category.name == "Git在手天下我有"%}
+                                            <img src="../../static/images/pic_git.jpg">
+                                        {% elif category.name == "Linux入门到放弃"%}
+                                            <img src="../../static/images/pic_linux.jpg">
+                                        {% elif category.name == "Docker送你走"%}
+                                            <img src="../../static/images/pic_docker.jpg">
+                                        {% elif category.name == "内功秘籍"%}
+                                            <img src="../../static/images/pic_neigong.jpg">
                                         {% else %}
                                             <img src="../../static/images/woodcraft-1200.jpg">
                                         {% endif %}
