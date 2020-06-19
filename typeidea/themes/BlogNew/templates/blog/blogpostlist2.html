@@ -115,7 +115,13 @@
 
                                 <div class="entry__thumb" style="height: 350px;">
                                     <a class="entry__thumb-link">
-                                        <img src="../../static/images/woodcraft-1200.jpg">
+                                        {% if cate.id  %}
+                                            {% if category.id == 1 %}
+                                            <img src="../../static/images/pic_django.jpeg">
+                                            {% endif %}
+                                        {% else %}
+                                            <img src="../../static/images/woodcraft-1200.jpg">
+                                        {% endif %}
                                     </a>
                                 </div>
 
