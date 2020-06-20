@@ -91,9 +91,9 @@ class IndexViewGallery(TemplateView):
     template_name = 'newindex/index-gallery.html'
 
 # beta版本的index的路由
-def index_diagoona (request, page_name):
-    page_name = page_name
-    return render(request,'newindex/index-'+page_name+'.html')
+# def index_diagoona (request, page_name):
+#     page_name = page_name
+#     return render(request,'newindex/index-'+page_name+'.html')
 
 
 class BlogIndexView(IndexView):
@@ -157,6 +157,26 @@ class PostDetailView(CommonViewMixinDetails,DetailView):
     context_object_name = 'post'
     template_name = 'blog/blogdetails2.html'
     pk_url_kwarg = 'post_id'
+
+# 写一个新的details页面
+#暂时用不到了
+# class PostDetailView2(IndexView):
+#     def get_context_data(self,**kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context.update({'sidebars':SideBar.get_all()})
+#         context.update(Category.get_navs())
+#         post_id = self.kwargs.get('post_id')
+#         print("zhzhz",post_id)
+#         return context
+#
+#     def get_queryset(self):
+#         queryset = super().get_queryset()
+#         post_id = int(self.kwargs.get('post_id'))
+#         print(queryset.filter(id=post_id))
+#         return queryset.filter(id=post_id)
+#     # queryset = Post.get_one_post()
+#     context_object_name = 'posts'
+#     template_name = 'blog/blogdetails2.html'
 
 class SearchView(IndexView):
     def get_context_data(self):

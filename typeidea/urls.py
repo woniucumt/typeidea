@@ -22,7 +22,7 @@ from django.views.generic import TemplateView
 #from blog.views import post_detail,post_list
 from blog.views import IndexView, CategoryView,TagView,PostDetailView, SearchView,aboumeView
 from blog.views import acaindexView, testView, galleryView, BlogIndexView, postlistView,abousiteView
-from blog.views import postdetialview,acaCTView,newindexView, index_diagoona,IndexViewBlog,\
+from blog.views import postdetialview,acaCTView,newindexView,IndexViewBlog,\
     IndexViewGallery,IndexViewAca,IndexViewHome
 from config.views import LinkListView
 from django.conf import settings
