@@ -530,6 +530,17 @@ form,
   left: -15px;
 }
 
+.content_shadow{
+  -moz-box-shadow: 0px 0px 5px rgba(81, 81, 81, 0.2); /* 老的 Firefox */
+  box-shadow: 0px 0px 5px rgba(81, 81, 81, 0.2);
+}
+/*点赞*/
+.dianzan:hover{
+  /*transform: scale(1.2);*/
+  /*opacity: 0.1;*/
+  content: url('../../static/images/xxdl.gif');
+
+}
 /* dots jump */
 .dots-jump > div {
   -webkit-animation: dots-jump 1.2s infinite ease;

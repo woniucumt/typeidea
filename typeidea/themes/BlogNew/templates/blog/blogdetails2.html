@@ -27,7 +27,6 @@
     <script type="text/javascript" src="../../static/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="../../static/js/bootstrap.js"></script>
 
-
 </head>
 
 <body class="ss-bg-white" style="min-width: 600px">
@@ -97,7 +96,7 @@
         <div class="s-content content">
             <main class="row content__page" style="width: 95%">
 
-                <article class="column large-full entry format-standard"
+                <article class="column large-full entry format-standard content_shadow"
                          style="background-color: #f9fafb;padding-top: 40px;padding-bottom: 40px;border-radius: 20px;">
 
 {#                    <div class="media-wrap entry__media">#}
@@ -145,6 +144,14 @@
                         <div id="respond" style="text-align: center">
                             <div style="padding-top: 40px;">
                                  <span style="color: #757578" >---------END---------</span>
+                                <div >
+                                   <img id='dianzanimg1' class="dianzan" onclick="dianzan1()" src="../../static/images/sjb8.gif" style="height: 80px;width: 80px;border-radius: 10%">
+                                   <img id='dianzanimg2' class="dianzan" onclick="dianzan2()" src="../../static/images/sjb8.gif" style="height: 80px;width: 80px;border-radius: 10%">
+                                   <img id='dianzanimg3' class="dianzan" onclick="dianzan3()" src="../../static/images/sjb8.gif" style="height: 80px;width: 80px;border-radius: 10%">
+                                   <img id='dianzanimg4' class="dianzan" onclick="dianzan4()" src="../../static/images/sjb8.gif" style="height: 80px;width: 80px;border-radius: 10%">
+                                   <img id='dianzanimg5' class="dianzan" onclick="dianzan5()" src="../../static/images/sjb8.gif" style="height: 80px;width: 80px;border-radius: 10%">
+                                </div>
+
                             </div>
                             <div style="background:rgb(249,250,251);margin-top: 5rem;border-radius: 20px;">
                                 <div style="display: inline-block;vertical-align:middle">
@@ -157,7 +164,6 @@
                                   <p class='footbanner' style="color: #535354"> 如果觉得这篇文章有用，欢迎转载，转载请注明出处！</p>
                                 </div>
                             </div>
-
                         </div>
                         <!-- END respond-->
                     </div> <!-- end comment-respond -->
@@ -188,6 +194,7 @@
     <script src="../../static/js/jquery-3.2.1.min.js"></script>
     <script src="../../static/js/plugins.js"></script>
     <script src="../../static/js/detailsmain2.js"></script>
+    <script src="../../static/js/dianzan.js"></script>
 {#    生成随机数#}
     <script type="text/javascript">
         var ele=document.getElementsByClassName("random");

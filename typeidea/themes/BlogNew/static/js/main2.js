@@ -82,8 +82,8 @@ var gotoByScroll = function (){
 var dianzan1 = function () {
 	document.getElementById("dianzan1").innerHTML="谢谢大佬!!!";
 	document.getElementById("dianzanimg1").setAttribute("src","../../static/images/xxdl.gif")
-
 }
+
 var dianzan2 = function () {
 	document.getElementById("dianzan2").innerHTML="谢谢大佬!!!";
 	document.getElementById("dianzanimg2").setAttribute("src","../../static/images/xxdl.gif")

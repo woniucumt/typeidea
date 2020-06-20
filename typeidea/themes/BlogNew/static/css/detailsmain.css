@@ -3605,12 +3605,11 @@ body.search-is-visible {
   font-weight: 400;
 
 }
+
 .dianzan:hover{
   /*transform: scale(1.2);*/
   /*opacity: 0.1;*/
   content: url('../../static/images/xxdl.gif');
-
-  
 
 }
 .taitou{
