@@ -32,20 +32,20 @@ $(document).ready(function () {
     const autoplayBg = false;	// set Auto Play for Background Images
     setBgOverlay();
 
-    const bgControl = $('.tm-bg-control');
-    bgControl.click(function() {
-        bgControl.removeClass('active');
-        $(this).addClass('active');
-        const id = $(this).data('id');
-        setBg(id);
-    });
+    // const bgControl = $('.tm-bg-control');
+    // bgControl.click(function() {
+    //     bgControl.removeClass('active');
+    //     $(this).addClass('active');
+    //     const id = $(this).data('id');
+    //     setBg(id);
+    // });
 
-    $(window).on("backstretch.after", function (e, instance, index) {
-        const bgControl = $('.tm-bg-control');
-        bgControl.removeClass('active');
-        const current = $(".tm-bg-controls-wrapper").find(`[data-id=${index}]`);
-        current.addClass('active');
-    });
+    // $(window).on("backstretch.after", function (e, instance, index) {
+    //     const bgControl = $('.tm-bg-control');
+    //     bgControl.removeClass('active');
+    //     const current = $(".tm-bg-controls-wrapper").find(`[data-id=${index}]`);
+    //     current.addClass('active');
+    // });
 
     $(window).resize(function() {
         setBgOverlay();
