@@ -60,14 +60,39 @@ https://templatemo.com/tm-550-diagoona
             <div class="tm-row">
                 <div class="tm-col-left"></div>
                 <main class="tm-col-right">
-                    <section class="tm-content">
+                    <section class="tm-content" id="section_1">
                         <h2 class="mb-5 tm-content-title">我劝天公重抖擞</h2>
                         <p class="mb-5 content_ordinary">『 山重 』『 醍醐 』『 花明 』</p>
                         <hr class="mb-5">
                         <p class="mb-5 content_ordinary">进击的研究僧。<br/>撸得了计算思维，盘得了代码可读性分析。
                             软件与硬件编程齐飞，Block与Scratch共一色。我待ML如初恋，ML虐我千百遍。
                         </p>
-                        <a href="javascript:alert('该系统维护中！敬请期待！')" class="btn btn-primary">研究领域</a>
+{#                        <a href="javascript:alert('该系统维护中！敬请期待！')" class="btn btn-primary">研究领域</a>#}
+                        <a onclick="showSection2()" class="btn btn-primary">查看研究</a>
+
+                    </section>
+                    <section class="tm-content tm-about" id="section_2" style="display:none;">
+                        <h2 class="mb-5 tm-content-title">我劝天公重抖擞</h2>
+                        <div class="media my-3">
+                            <a href="#" class="btn btn-primary" style="width: 100%">
+                                <p class="section_2_p" >计算思维与图形化编程</p>
+                            </a>
+                        </div>
+                        <div class="media my-3">
+                            <a href="#" class="btn btn-primary" style="width: 100%">
+                                <p class="section_2_p">Scratch-Python编程工具</p>
+                            </a> </div>
+                        <div class="media my-3">
+                            <a href="#" class="btn btn-primary" style="width: 100%">
+                                <p class="section_2_p">计算思维与图形化编程</p>
+                            </a></div>
+                        <div class="media my-3" style="padding-bottom: 20px">
+                            <a href="#" class="btn btn-primary" style="width: 100%">
+                                <p class="section_2_p">基于树莓派的智能家居</p>
+                            </a>
+                        </div>
+                        <hr/>
+                        <a onclick="showSection1()" class="btn btn-primary">返回主页</a>
                     </section>
                 </main>
             </div>
@@ -99,5 +124,15 @@ https://templatemo.com/tm-550-diagoona
         });
 
     </script>
+    <script>
+            function showSection2(str) {
+                document.getElementById("section_1").style.display = "none";
+                document.getElementById("section_2").style.display = "block";
+            }
+            function showSection1(str) {
+                document.getElementById("section_2").style.display = "none";
+                document.getElementById("section_1").style.display = "block";
+            }
+        </script>
 </body>
 </html>

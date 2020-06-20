@@ -208,7 +208,7 @@ class testView(CommonViewMixin, ListView):
     queryset = Post.latest_posts()
     paginate_by = 5
     context_object_name = 'post_list'
-    template_name = 'test/test.html'
+    template_name = 'test/test2.html'
 
 class galleryView(CommonViewMixin, ListView):
     queryset = Post.latest_posts()
