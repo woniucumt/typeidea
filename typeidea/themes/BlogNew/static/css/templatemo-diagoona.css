@@ -71,7 +71,7 @@ p { line-height: 1.9; }
     width: 100%;
     /*height: 100%;*/
     display: flex;
-    /*z-index: -1000;*/
+    z-index: -1000;
 
 }
 
@@ -194,7 +194,7 @@ hr { border-top: 1px solid white; }
 
 /* Service */ 
 .tm-service-text { max-width: 365px; }
-.tm-service-img { margin-right: 25px; }
+.tm-service-img { margin-right: 25px; height: 80px;width: 80px;margin:0 auto}
 .tm-service-img-r { margin-left: 25px; }
 
 /* Contact */
