@@ -533,12 +533,12 @@ form,
 /* dots jump */
 .dots-jump > div {
   -webkit-animation: dots-jump 1.2s infinite ease;
-  animation: dots-jump 1.2s infinite ease;
-  animation-delay: 0.2s;
+  animation: dots-jump 1s infinite ease;
+  animation-delay: 0.1s;
 }
 
 .dots-jump > div:nth-of-type(1) {
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 
 .dots-jump > div:nth-of-type(3) {
