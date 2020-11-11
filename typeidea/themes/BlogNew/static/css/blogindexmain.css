@@ -1967,6 +1967,35 @@ input::-moz-focus-inner {
  * responsive:
  * common and reusable styles
  * ------------------------------------------------------------------- */
+@media screen and (max-width:2300px) {
+  .masonry-wrap {
+    max-width: 2160px;
+  }
+
+  .listing-header {
+    padding: 0 1.6vw 2.4rem;
+  }
+
+  /*.masonry .grid-sizer,*/
+  /*.masonry__brick {*/
+    /*width: 33.33333%;*/
+  /*}*/
+  .masonry .grid-sizer,
+  .masonry__brick {
+    width: 50%;
+    float: none;
+  }
+
+  .masonry__brick {
+    padding: 0 .6rem;
+  }
+
+  .masonry .entry {
+    margin-bottom: 1rem;
+  }
+
+}
+
 @media screen and (max-width:1800px) {
   .masonry-wrap {
     max-width: 1360px;
@@ -1976,43 +2005,50 @@ input::-moz-focus-inner {
     padding: 0 1.6vw 2.4rem;
   }
 
+  /*.masonry .grid-sizer,*/
+  /*.masonry__brick {*/
+    /*width: 33.33333%;*/
+  /*}*/
   .masonry .grid-sizer,
   .masonry__brick {
-    width: 33.33333%;
+    width: 100%;
+    float: none;
   }
 
   .masonry__brick {
-    padding: 0 1.6vw;
+    padding: 0 .6rem;
   }
 
   .masonry .entry {
-    margin-bottom: 3.2vw;
+    margin-bottom: 1rem;
   }
 
 }
 
-@media screen and (max-width:1700px) {
-  .masonry__brick {
-    padding: 0 1.4vw;
-  }
 
-  .masonry .entry {
-    margin-bottom: 1.8vw;
-  }
-
-}
 
 @media screen and (max-width:1600px) {
+  .masonry-wrap {
+    max-width: 1200px;
+  }
+
   .listing-header {
-    padding: 0 1.2vw 1.4rem;
+    padding: 0 1.8vw 1.4rem;
+  }
+
+
+    .masonry .grid-sizer,
+  .masonry__brick {
+    width: 100%;
+    float: none;
   }
 
   .masonry__brick {
-    padding: 0 1.2vw;
+    padding: 0 .6rem;
   }
 
   .masonry .entry {
-    margin-bottom: 1.4vw;
+    margin-bottom: 1rem;
   }
 
 }
@@ -2026,17 +2062,19 @@ input::-moz-focus-inner {
     padding: 0 1.8vw 1.4rem;
   }
 
-  .masonry .grid-sizer,
+
+    .masonry .grid-sizer,
   .masonry__brick {
     width: 100%;
+    float: none;
   }
 
   .masonry__brick {
-    padding: 0 1.8vw;
+    padding: 0 .6rem;
   }
 
   .masonry .entry {
-    margin-bottom: 1.6vw;
+    margin-bottom: 1rem;
   }
 
 }
@@ -2677,6 +2715,12 @@ body.search-is-visible {
  * responsive:
  * header
  * ------------------------------------------------------------------- */
+@media screen and (max-width:2000px) {
+  .s-header {
+    width: 290px;
+  }
+
+}
 @media screen and (max-width:1600px) {
   .s-header {
     width: 290px;
